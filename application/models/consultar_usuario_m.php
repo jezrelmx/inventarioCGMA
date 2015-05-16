@@ -24,6 +24,18 @@ class Consultar_usuario_m extends CI_Model {
 		}
 
 	}
+	public function eliminarUsuario($idUsuario){
+		$customQuery="UPDATE usuarios SET estatus=0 WHERE id_usuario=".$idUsuario.";";
+
+		
+		$resultado = $this->db->query($customQuery);
+		if($resultado){
+			return true;
+		}else{
+			return false;
+		}
+
+	}
 	
 }
 
