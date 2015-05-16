@@ -1,0 +1,31 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Consultar_usuario_m extends CI_Model {
+	public function __construct() {
+		parent::__construct();
+		$this->load->database();
+	}
+	
+	public function obtener_usuario($id=0){
+		if($id==0){
+			$customQuery="select * from usuarios ";
+			
+		}else{
+			$customQuery="select * from usuarios where id_usuario=".$id;
+		}
+		
+		$resultado = $this->db->query($customQuery);	
+		// $resultado = 1;
+		if ($resultado->num_rows()>0 ) {
+			return $resultado->result_array();
+		} else {
+			return false;
+		}
+
+	}
+	
+}
+
+/* End of file usuario_m.php */
+/* Location: ./application/models/usuario_m.php */
