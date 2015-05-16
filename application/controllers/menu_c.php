@@ -14,12 +14,18 @@ class Menu_c extends CI_Controller {
 	{
 	$this->load->view('head_v','');	
 	$this->load->view('footer_v','');	
+	$this->load->view('body_menu_v','');
 	}
 
 	public function altaArticulo()
 	{
-		echo "estamos en alta articulo";
+	//echo "estamos en alta articulo";
 	$this->load->view('alta','');	
+	}
+	public function altaUsuario()
+	{
+	//echo "estamos en alta articulo";
+	$this->load->view('articulo','');	
 	}
 
 }
