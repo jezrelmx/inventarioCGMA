@@ -15,37 +15,30 @@
 	        <th>Apellido Paterno</th>
 	        <th>Apellido Materno</th>
 	        <th># Empleado</th>
-	        <th>D</th>
-	        <th>Estado</th>
-	        <th>Acción</th>
+	        <th>Direccion ejecutiva</th>
+	        <th>Correo</th>
+	        
 
 	      </tr>
 	    </thead>
 	    <tbody>
 	    	<?php 
-	    		/*foreach ($listaUsuarios as $usuario) {
+	    		foreach ($resultado as $key =>$val) {
+	    			echo base_url()."consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")";
 	    			echo "<tr>";
-		    			echo "<td>".$usuario['nom_usuario']."</td>";
-		    			echo "<td>".$usuario['correo']."</td>";
-		    			echo "<td>".$usuario['nombre']."</td>";
-		    			echo "<td>".$usuario['estadoVista']."</td>";
-		    			echo "<td><div class='dropdown'>
-								  <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-expanded='true'>
-								    Dropdown
-								    <span class='caret'></span>
-								  </button>
-								  <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
-								    <li role='presentation'><a onClick= 'eliminarUsuario(".$usuario['id_usuario'].")' role='menuitem' tabindex='-1' href='#'>Eliminar</a></li>
-								    <li role='presentation'><a onClick= 'cambiarEstadoUsuario(".$usuario['id_usuario'].", ".$usuario['id_estado_usuario'].")' role='menuitem' tabindex='-1' href='#'>Modificar estado</a></li>
-								    <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Something else here</a></li>
-								    <li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Separated link</a></li>
-								  </ul>
-								</div>
-		    				</td>";
-		    			//echo "<td><button onClick= 'estadoUsuario(".$usuario['id_estado_usuario'].")' type='button' class='btn btn-default'>Modificar estado</button></td>";
+
+	    				echo "<td><a onClick='http://localhost/inventarioCGMA/consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")' href='#'>Eliminar usuario</a></td>";
+		    			echo "<td>".$val['nombre']."</td>";
+		    			echo "<td>".$val['ap_paterno']."</td>";
+		    			echo "<td>".$val['ap_materno']."</td>";
+		    			echo "<td>".$val['num_empleado']."</td>";
+		    			echo "<td>".$val['id_direccion_ejecutiva']."</td>";
+		    			echo "<td>".$val['email']."</td>";
+		    			
+		    			
 					echo "</tr>";
 		    		
-	    		}*/
+	    		}
 	    	 ?>   
 	    </tbody>
 	  </table>

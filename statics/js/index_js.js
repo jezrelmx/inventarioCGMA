@@ -17,6 +17,6 @@ function iniciar_sesion(){
 	alert(host+"Index_c/iniciar_sesioniniciando sesion");
 	var txtUsuario = document.getElementById('txtUsuario').value
 	var txtContrasenia =document.getElementById('txtContrasenia').value;
-	alert(txtUsuario+" "+txtContrasenia);
+	//alert(txtUsuario+" "+txtContrasenia);
 
 }
