@@ -1,10 +1,9 @@
 	<!-- MODAL DE ALTA DE USUARIO -->
-	<div class="modal fade" id="modal-id">
-		<div class="modal-dialog">
 		<form action="" method="POST" role ="form">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-					<div class="form-group">
-						<label for="">Nombre</label>
+					<div class="form-group"> 
+					<strong><center><legend>Formulario Alta Usuario</legend></center><strong>
+						<br><label for="">Nombre</label>
 						<input type="text" class="form-control" name="txtNombre" id="txtNombre" >
 					</div>
 					<div class="form-group">
@@ -27,18 +26,20 @@
 						<label for="">No. de empleado</label>						
 						<input type="text" class="form-control" name = "txtNempleado" id="txtNempleado">
 					</div>
-					<div>
+					<div class="form-group">
 					<label for="">Direccion ejecutiva</label>
-					<select id="direccion">
+					<br>
+					<select class="form-control" id="direccion">
 						 <option value="0"></option>
 						 <?php foreach ($cat_direccion_ejecutiva as $key => $value) { ?>
 						 <option value="<?php echo $key;?>"><?php echo $value['nombre'];?></option>
 						 <?php }?>
 					</select>
 					</div>
-					<div>
+					<div class="form-group">
 					<label for="">Tipo usuario</label>
-					<select id="tipoUsuario">
+					<br>
+					<select  class="form-control" id="tipoUsuario">
 						 <option value="0"></option>
 						 <?php foreach ($cat_tipo_usuario as $key => $value) { ?>
 						 	<option value="<?php echo $key;?>"><?php echo $value['descripcion'];?></option>
@@ -60,12 +61,5 @@
 					<button type="button"  onclick ="guardarDatosUsuario()" class="btn btn-primary" >Guardar</button>
 				</div>
 				</div></form>
-				<script>
- var base = "<?php echo base_url();?>";
- </script>
-<script type="text/javascript" src="<?php echo base_url(); ?>statics/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>statics/js/altaUsr.js"></script>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-</div>
