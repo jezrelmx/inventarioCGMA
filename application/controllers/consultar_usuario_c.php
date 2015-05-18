@@ -25,7 +25,7 @@ class Consultar_usuario_c extends CI_Controller {
 
 				echo json_encode($arregloJSON);
 			}else{
-				$this->load->view('Consultar_usuario_v',$datos);	
+				$this->load->view('consultar_usuario_v',$datos);	
 			}
 
 				
