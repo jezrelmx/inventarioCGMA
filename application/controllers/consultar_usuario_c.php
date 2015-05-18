@@ -45,9 +45,11 @@ class Consultar_usuario_c extends CI_Controller {
 		}
 		
 	}
-	public function eliminarUsuario($idUsuario){
-		alert("estoy en elimina usuario");
-		/*$resultado=$this->consultar_usuario_m->eliminarUsuario($idUsuario);
+	public function eliminarUsuario(){
+		
+		//$id_usuario=$this->input->post('idUsuario');
+		echo "estoy en elimina usuario controlador ".$id_usuario;
+		/*$resultado=$this->consultar_usuario_m->eliminarUsuario($id_usuario);
 		if ($resultado) {
 			//$datos['resultado']=$resultado;
 			if($this->agent->mobile()){

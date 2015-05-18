@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="<?php echo base_url();?>statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>
-	<link href="<?php echo base_url();?>statics/css/style.css" rel="stylesheet" type="text/css" media="screen">
 	
-		<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/index_js.js" ></script>
+	
+	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/index_js.js" ></script>
 </head>
 <body id ="cuerpo" onload="admin()">
 <?php echo base_url();?>Index_c/iniciar_sesion/iniciando_sesion
