@@ -19,33 +19,39 @@ class Index_c extends CI_Controller {
 		
 		$usuario=$this->input->post('txtCorreo');
 		$contrasenia=$this->input->post('txtContrasenia');
-		$resultado=$this->index_m->buscar_usuario($usuario, $contrasenia);
+		$resultado=$this->index_m->buscar_usuario($usuario);
 		$tipo_usuario;
 
 		if($resultado){
-			$tipo_usuario=$resultado[0]['id_direccion_ejecutiva'];
-			
-			if($this->agent->mobile()){
-				$arregloJSON = array(
+			if($resultado[0]['id_tipo_usuario']==1 && strcmp($contrasenia, '')>0 && strcmp($contrasenia,$resultado[0]['contrasenia'])==0){
+				$tipo_usuario=$resultado[0]['id_direccion_ejecutiva'];
+	
+				if($this->agent->mobile()){
+					unset($resultado[0]['contrasenia']);
 
-				"code" => 200,
-				"message" => "Usuario encontrado",
-				"data" => json_encode($resultado[0]),
-				 );
+					$arregloJSON = array(
 
-				echo json_encode($arregloJSON);
-			}else{
+					"code" => 200,
+					"message" => "Usuario encontrado",
+					"data" => json_encode($resultado[0]),
+					 );
 
-				if($tipo_usuario==1){					
-
-					redirect(base_url()."menu_c");
-
-					redirect("http://localhost/inventarioCGMA/menu_c");
-
+					echo json_encode($arregloJSON);
 				}else{
-					redirect("http://google.com.mx");
+
+					if($tipo_usuario==1){		
+
+						redirect(base_url()."menu_c");
+					}
 				}
+			}else if($resultado[0]['id_tipo_usuario']==2){
+				//usuario servidor público
+				//$id_usuario=$resultado[0]['id_usuario'];
+				redirect(base_url()."resguardo_c/resguardo/".$usuario);				
+			}else{
+				echo "El tipo de usuario no existe";
 			}
+			
 		}else{
 			if($this->agent->mobile()){
 				$arregloJSON = array(
