@@ -20,6 +20,28 @@ class AltaUsuario_c extends CI_Controller {
     $this->load->view('altaUsuario_v', $datos);
  }
 
+public function catalogoUsuarios(){
+	$datos['cat_tipo_usuario']=$this->altaUsuario_m->mostrarTipoUsuario();
+ 	$datos['cat_direccion_ejecutiva']=$this->altaUsuario_m->mostrarDireccionEjecutiva();
+
+	 if($datos){
+
+	 $respuesta_json= array(
+	 'code' => 200,
+	 'message' => 'Catalogo de usuarios correcto',
+	 'data' => $datos
+	 );
+	 echo json_encode($respuesta_json);
+	 }else{
+	 $respuesta_json= array(
+	 'code' => 600,
+	 'message' => 'Catalogo de usuarios incorrecto',
+	 'data' => 'Error' 
+	 );
+	 echo json_encode($respuesta_json);
+	 }
+
+}
 
 public function guardarDatosUsuario(){
 	//echo "estamos en el controlador";
