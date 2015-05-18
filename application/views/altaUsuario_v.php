@@ -2,8 +2,8 @@
 		<form action="" method="POST" role ="form">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 					<div class="form-group"> 
-					<strong><center><legend>Formulario Alta Usuario</legend></center><strong>
-						<br><label for="">Nombre</label>
+					<br><strong><center><legend>Formulario Alta Usuario</legend></center><strong>
+						<label for="">Nombre</label>
 						<input type="text" class="form-control" name="txtNombre" id="txtNombre" >
 					</div>
 					<div class="form-group">

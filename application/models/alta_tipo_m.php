@@ -10,8 +10,18 @@ class Alta_tipo_m extends CI_Model {
 		$this->load->database();
 		
 	}
+public function guardarTipoArticulo($descripcion, $clave){
+    $customQuery = "INSERT INTO cat_tipo_mueble(descripcion,estatus,clave) VALUES ('".$descripcion."', 1 , '".$clave."')";
+		$resultado = $this->db->query($customQuery);
+			if ($resultado) {
+			return true;
+		} else {
+			return false;
+		}
 
+	}
 }
+
 
 /* End of file  */
 /* Location: ./application/models/ */
