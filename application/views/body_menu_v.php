@@ -16,7 +16,7 @@
 								      <li class="dropdown">  
 								      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articulos <span class="caret"></span></a>
 								      <ul class="dropdown-menu">
-								            <li><a href="#" onclick ="controlaMenu('menu_c/altaTipo')"  >Alta Articulo</a></li>                       
+								            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo')">Alta Articulo</a></li>                       
 								          </ul>
 								       </li>
 								       
