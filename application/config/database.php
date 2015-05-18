@@ -64,11 +64,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
+	'hostname' => '192.168.3.106',
+	'username' => 'postgres',
+	'password' => 'Grey',
+	'database' => 'inventarioCGMA',
+	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => TRUE,
@@ -81,5 +81,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE
+	'save_queries' => TRUE,
+	'port' => 5432
 );
