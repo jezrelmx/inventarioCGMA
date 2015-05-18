@@ -47,9 +47,8 @@ class Consultar_usuario_c extends CI_Controller {
 	}
 	public function eliminarUsuario(){
 		
-		//$id_usuario=$this->input->post('idUsuario');
-		echo "estoy en elimina usuario controlador ".$id_usuario;
-		/*$resultado=$this->consultar_usuario_m->eliminarUsuario($id_usuario);
+		$id_usuario=$this->input->post('idUsuario');
+		$resultado=$this->consultar_usuario_m->eliminarUsuario($id_usuario);
 		if ($resultado) {
 			//$datos['resultado']=$resultado;
 			if($this->agent->mobile()){
@@ -62,7 +61,7 @@ class Consultar_usuario_c extends CI_Controller {
 
 				echo json_encode($arregloJSON);
 			}else{
-				$this->load->view('Consultar_usuario_v','');	
+				$this->index();	
 			}
 
 				
@@ -79,7 +78,7 @@ class Consultar_usuario_c extends CI_Controller {
 					echo "El usuario no se pudo eliminar";
 				
 			}
-		}*/
+		}
 	}
 	
 }
