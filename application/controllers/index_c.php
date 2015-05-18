@@ -37,7 +37,7 @@ class Index_c extends CI_Controller {
 			}else{
 
 				if($tipo_usuario==1){					
-					redirect("http://192.168.3.108/inventarioCGMA/menu_c");
+					redirect("http://localhost/inventarioCGMA/menu_c");
 				}else{
 					redirect("http://google.com.mx");
 				}

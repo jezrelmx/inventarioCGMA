@@ -3,20 +3,20 @@
 <div class="container">
 				<div class = "row">
 					<div class = "form-group col-xs-12 col-md-3 col-sm-12 col-lg-3">
-    							<center><legend>Menu Inventario</legend></center>
+    							<br><center><legend>Menu Inventario</legend></center>
 								  	<ul class="nav nav-pills nav-stacked">
 								        <li class="active"><a href="#">Bienvenido</a></li>
 								        <li class="dropdown">
 								          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
 								          <ul class="dropdown-menu">
 								            <li><a  href="#" onclick ="controlaMenu('menu_c/altaUsuario')"  >Alta Usuario</a></li>
-								            <li><a  href="#" onclick="controlaMenu('menu_c/altaUsuario')">Consulta Usuario</a></li>                      
+								            <li><a  href="#" onclick="controlaMenu('consultar_usuario_c/index')">Consulta Usuario</a></li>                      
 								          </ul>
 								        </li>
 								      <li class="dropdown">  
 								      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articulos <span class="caret"></span></a>
 								      <ul class="dropdown-menu">
-								            <li><a href="#" onclick ="controlaMenu('menu_c/altaUsuario')"  >Alta Articulo</a></li>                       
+								            <li><a href="#" onclick ="controlaMenu('menu_c/altaTipo')"  >Alta Articulo</a></li>                       
 								          </ul>
 								       </li>
 								       
