@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container col-xs-12 col-sm-12 col-md-9 col-lg-9">
 	<center>
 		<form class="center" action="" method="POST">
@@ -37,3 +38,11 @@
 <script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/jquery.js"></script>
 <script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/altaArticulo.js"></script>
 
+=======
+<div class="container">
+	<form>		
+	  <h2 class="text-center">Alta artículos.</h2>
+		
+	</form>
+</div> <!--DinDivConteiner-->
+>>>>>>> b3c37f0963326fb2e903b4565f1d6b6435572d4f

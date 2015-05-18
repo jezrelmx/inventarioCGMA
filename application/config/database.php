@@ -64,7 +64,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.3.106',
+	'hostname' => 'localhost',
 	'username' => 'postgres',
 	'password' => 'Grey',
 	'database' => 'inventarioCGMA',
@@ -81,6 +81,5 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE,
-	'port' => 5432
+	'save_queries' => TRUE
 );
