@@ -1,0 +1,48 @@
+/*header{
+	width: 90%;
+	height: 30px;
+	background-color:green;
+	padding: 10px;
+	border: 1px solid red;
+	margin: 10px;
+}
+nav,#aside1{
+	width: 20%;
+	background: #ddd;
+	height: 300px;
+	float: left;
+	margin-left: 11px;
+
+}
+#primer_parte{
+	width: 50%;
+	background: #ddd;
+	height: auto;
+	float: left;
+	margin-left: 10px;
+}
+#article1{
+	height: 152px; /*siempre se respeta lo que hay con !important */
+/*}
+#footer1{
+	height: 20px;
+}
+
+#footer1,#article1,header.header_interior,#footer2{
+	width:90%;
+	margin:8px;
+	padding:10px;
+	border:1px solid gray;
+	background: aqua;
+}
+#footer2{
+	clear:both;
+}
+.clear{
+	clear:both;
+}*/
+.columna{
+	border:1px solid #aaa;
+	height: auto;
+	background: yellow;
+}
