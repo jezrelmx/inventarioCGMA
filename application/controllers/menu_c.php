@@ -27,6 +27,11 @@ class Menu_c extends CI_Controller {
 	//echo "estamos en alta articulo";
 	$this->load->view('articulo','');	
 	}
+	public function altaTipo()
+	{
+	//echo "estamos en alta articulo";
+	$this->load->view('alta_tipo_v','');	
+	}
 
 }
 
