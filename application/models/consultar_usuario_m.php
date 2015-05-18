@@ -9,10 +9,10 @@ class Consultar_usuario_m extends CI_Model {
 	
 	public function obtener_usuario($id=0){
 		if($id==0){
-			$customQuery="select * from usuarios ";
+			$customQuery="select * from usuarios order by id_usuario ";
 			
 		}else{
-			$customQuery="select * from usuarios where id_usuario=".$id;
+			$customQuery="select * from usuarios where id_usuario=".$id." order by id_usuario;";
 		}
 		
 		$resultado = $this->db->query($customQuery);	

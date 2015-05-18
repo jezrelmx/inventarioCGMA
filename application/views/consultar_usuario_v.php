@@ -1,5 +1,7 @@
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-	
+	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/bootstrap.js" ></script>
+		<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/jquery.js" ></script>
+	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
 	  <h2>Usuarios registrados</h2>
 	    <pre>
 	    <?php 
@@ -24,10 +26,10 @@
 	    <tbody>
 	    	<?php 
 	    		foreach ($resultado as $key =>$val) {
-	    			echo base_url()."consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")";
+	    			//echo base_url()."consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")";
 	    			echo "<tr>";
 
-	    				echo "<td><a onClick='http://localhost/inventarioCGMA/consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")' href='#'>Eliminar usuario</a></td>";
+	    				echo "<td><a onClick='eliminarUsuario(".$val['id_usuario'].")' href='#'>Eliminar usuario</a></td>";
 		    			echo "<td>".$val['nombre']."</td>";
 		    			echo "<td>".$val['ap_paterno']."</td>";
 		    			echo "<td>".$val['ap_materno']."</td>";
@@ -42,7 +44,6 @@
 	    	 ?>   
 	    </tbody>
 	  </table>
-
-
+	  
 
 </div>
