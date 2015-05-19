@@ -24,7 +24,7 @@
 								      <li class="dropdown">   
 								      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
 								      <ul class="dropdown-menu">
-								            <li><a href="#"  onclick ="controlaMenu('menu_c/altaUsuario')" >Consulta Usuarios</a></li>
+								            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')" >Consulta Usuarios</a></li>
 								            <li><a href="#"  onclick ="controlaMenu('menu_c/altaUsuario')" >Consulta Articulos</a></li>
                         
 								          </ul>
