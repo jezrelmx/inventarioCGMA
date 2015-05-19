@@ -9,7 +9,7 @@ class AltaUsuario_m extends CI_Model{
 
 public function guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia, $estatus){
        	$customQuery = "INSERT INTO usuarios(nombre, ap_paterno, ap_materno, cargo, num_empleado, id_direccion_ejecutiva, id_tipo_usuario, email, contrasenia, 
-            estatus) VALUES ('".$nombre."', '".$ap_paterno."', '".$ap_materno."',  '".$cargo."',  ".$num_empleado.", "
+            estatus) VALUES ('".$nombre."', '".$ap_paterno."', '".$ap_materno."',  '".$cargo."',  '".$num_empleado."', "
             .$id_direccion_ejecutiva.",".$id_tipo_usuario.", '".$email."', '".$contrasenia."', '".$estatus."')";
 		$resultado = $this->db->query($customQuery);
 			if ($resultado) {

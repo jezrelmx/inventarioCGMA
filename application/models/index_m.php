@@ -7,10 +7,23 @@ class Index_m extends CI_Model {
 		$this->load->database();
 	}
 	
-	public function buscar_usuario($usuario, $contrasenia){
+	public function buscar_usuario($usuario,$have_pass=0){
+		if($have_pass==0){
+			$customQuery="select id_usuario, nombre, ap_paterno, ap_materno, cargo, num_empleado, 
+      		 id_direccion_ejecutiva, id_tipo_usuario, email, estatus, contrasenia from usuarios";
+		}else{
+			$customQuery="select id_usuario, nombre, ap_paterno, ap_materno, cargo, num_empleado, 
+      		 id_direccion_ejecutiva, id_tipo_usuario, email, estatus from usuarios";	
+		}
 
-		$customQuery = "select id_usuario, nombre, ap_paterno, ap_materno, cargo, num_empleado, 
-       id_direccion_ejecutiva, id_tipo_usuario, email, estatus from usuarios where email='".$usuario."' and contrasenia='".$contrasenia."' and estatus=1;";
+		if($usuario){
+			$customQuery .=  " where email='".$usuario."' and estatus=1;";
+		
+		}else{
+			$customQuery .=  " where estatus=1;";
+			
+		}
+
 		$resultado = $this->db->query($customQuery);
 
 		// $resultado = 1;
