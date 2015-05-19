@@ -43,9 +43,7 @@ class ConsultarTipoArticulo_m extends CI_Model {
 		} else {
 			return false;
 		}
-	}
-
-		
+	}//FinCambiarETA		
 }
 /* End of file usuario_m.php */
 /* Location: ./application/models/usuario_m.php */
