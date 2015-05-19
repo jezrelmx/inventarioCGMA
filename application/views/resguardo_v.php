@@ -1,47 +1,71 @@
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
 	  <h2>Resguardo</h2>
-	    <pre>
-	    <?php 
-	   //var_dump($resultado);
-	   //echo "este es el id del primer usuario".$resultado[1]['id_usuario'];
-	     ?>
-	     </pre>      
-	  <table border="1" class="table table-bordered">
-	    <thead>
-	      <tr>
-	      <th>Eliminar</th>
-	        <th>Nombre</th>
-	        <th>Apellido Paterno</th>
-	        <th>Apellido Materno</th>
-	        <th># Empleado</th>
-	        <th>Direccion ejecutiva</th>
-	        <th>Correo</th>
-	        
+	    <?php $bandera=0;?>     
 
-	      </tr>
-	    </thead>
-	    <tbody>
-	    	<?php 
-	    		/*foreach ($resultado as $key =>$val) {
-	    			//echo base_url()."consultar_usuario_c/eliminarUsuario(".$val['id_usuario'].")";
-	    			echo "<tr>";
+	<?php 
+	    foreach ($usuario as $key =>$val) {
+	    	$sin_resguardo=1;
+	    	echo "<br> <div>
+	    	
+		    
+		      	<label>Nombre: ".$val['nombre']." ".$val['ap_paterno']." ".$val['ap_materno']."</label>
+		      	<br>
+		        <label>Número de empleado: ".$val['num_empleado']."</label>
+		        <br>
+		        <label>Direccion ejecutiva: ".$val['nom_direccion']."</label>
+		        <br>
+		        <label>Cargo: ".$val['cargo']."</label>
+			    ";
+			    
+				foreach ($resguardo as $key1 =>$val1){   			
 
-	    				echo "<td><a onClick='eliminarUsuario(".$val['id_usuario'].")' href='#'>Eliminar usuario</a></td>";
-		    			echo "<td>".$val['nombre']."</td>";
-		    			echo "<td>".$val['ap_paterno']."</td>";
-		    			echo "<td>".$val['ap_materno']."</td>";
-		    			echo "<td>".$val['num_empleado']."</td>";
-		    			echo "<td>".$val['id_direccion_ejecutiva']."</td>";
-		    			echo "<td>".$val['email']."</td>";
-		    			
-		    			
-					echo "</tr>";
-		    		
-	    		}*/
-	    	 ?>   
-	    </tbody>
-	  </table>
+		    			if($val['id_usuario']==$val1['id_usuario']){
+		    				$num_inventario=$val1['clave']."-".$val1['progresivo'];
+		    				if($bandera==0){
+				    			echo "<br><table border='1' class='table table-bordered'>
+							    <thead>
+							      <tr>
+							      	<th>Número de Inventario</th>
+							        <th>Articulo</th>
+							        <th>Descripcción</th>
+							        <th>Estatus</th>
+							      </tr>
+							    </thead>
+							    <tbody>";
+							    $bandera=1;
+							}
+			    			echo "<tr>
+
+			    				
+				    			<td>".$num_inventario."</td>
+				    			<td>".$val1['tipo']."</td>
+				    			<td>".$val1['caracteristicas']."</td>
+				    			<td>".$val1['descripcion']."</td>
+				    			";
+				    			
+				    			
+							echo "</tr>";
+						}else{
+							if($bandera==1){
+								echo "
+								</tbody>
+								</table>
+								";
+								$bandera=0;
+							}else{
+								$sin_resguardo=0;
+							}
+						}
+			    		
+		    		}
+		    	if ($sin_resguardo==0) {
+		    		 echo "<br>El usuario no tiene resguardo<br>";
+		    	}
+				 
+			echo "</div><!--Fin usuario-->";
+		}
+	 ?>
 	  
 
 </div>

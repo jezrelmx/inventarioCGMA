@@ -9,18 +9,22 @@ class Index_m extends CI_Model {
 	
 	public function buscar_usuario($usuario,$have_pass=0){
 		if($have_pass==0){
-			$customQuery="select id_usuario, nombre, ap_paterno, ap_materno, cargo, num_empleado, 
-      		 id_direccion_ejecutiva, id_tipo_usuario, email, estatus, contrasenia from usuarios";
+			$customQuery="select u.id_usuario, u.nombre, u.ap_paterno, u.ap_materno, u.cargo, u.num_empleado, 
+      		 c_d_t.nombre as nom_direccion,u.id_direccion_ejecutiva, u.id_tipo_usuario, u.contrasenia,
+      		 u.email, u.estatus from usuarios u
+      		 inner join cat_direccion_ejecutiva c_d_t on(u.id_direccion_ejecutiva=c_d_t.id_direccion_ejecutiva)";
 		}else{
-			$customQuery="select id_usuario, nombre, ap_paterno, ap_materno, cargo, num_empleado, 
-      		 id_direccion_ejecutiva, id_tipo_usuario, email, estatus from usuarios";	
+			$customQuery="select u.id_usuario, u.nombre, u.ap_paterno, u.ap_materno, u.cargo, u.num_empleado, 
+      		 c_d_t.nombre as nom_direccion,u.id_direccion_ejecutiva, u.id_tipo_usuario, 
+      		 u.email, u.estatus from usuarios u
+      		 inner join cat_direccion_ejecutiva c_d_t on(u.id_direccion_ejecutiva=c_d_t.id_direccion_ejecutiva)";	
 		}
 
 		if($usuario){
-			$customQuery .=  " where email='".$usuario."' and estatus=1;";
+			$customQuery .=  " where u.email='".$usuario."' and u.estatus=1;";
 		
 		}else{
-			$customQuery .=  " where estatus=1;";
+			$customQuery .=  " where u.estatus=1;";
 			
 		}
 

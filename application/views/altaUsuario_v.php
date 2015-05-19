@@ -56,10 +56,12 @@
 						<input type="Password" class="form-control"  name "txtContrasenia" id="txtContrasenia">
 					</div>
 				</div>
+				
 				<div class="modal-footer">
 					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 					<button type="button"  onclick ="guardarDatosUsuario()" class="btn btn-primary" >Guardar</button>
 				</div>
+				
 				</div></form>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->

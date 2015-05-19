@@ -1,5 +1,5 @@
 <div  id="divQuitar" class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-			<table class="table table-bordered">
+			<table class="table table-bordered" class="table table-striped">
 		    <thead title="">
 		      <tr>
 		      	<th>Eliminar</th>
