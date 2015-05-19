@@ -23,22 +23,25 @@ class AltaUsuario_c extends CI_Controller {
 public function catalogoUsuarios(){
 	$datos['cat_tipo_usuario']=$this->altaUsuario_m->mostrarTipoUsuario();
  	$datos['cat_direccion_ejecutiva']=$this->altaUsuario_m->mostrarDireccionEjecutiva();
+ 	$tipoUsuario=array();	
+ 	/*foreach ($datos['cat_tipo_usuario'] as $key => $value) {
+ 		array_push($tipoUsuario['cat_tipo_usuario'][id_tipo_usuario"=>'"'.$key.'", "descripcion"'=>"'".$value['descripcion']."'"));
+ 	}*/
 
 	 if($datos){
-
-	 $respuesta_json= array(
-	 'code' => 200,
-	 'message' => 'Catalogo de usuarios correcto',
-	 'data' => $datos
-	 );
-	 echo json_encode($respuesta_json);
+	 	$respuesta_json= array(
+			 'code' => 200,
+			 'message' => 'Catalogo correcto',
+			 'data' => $datos
+		 );
+		 echo json_encode($respuesta_json);
 	 }else{
-	 $respuesta_json= array(
-	 'code' => 600,
-	 'message' => 'Catalogo de usuarios incorrecto',
-	 'data' => 'Error' 
-	 );
-	 echo json_encode($respuesta_json);
+		 $respuesta_json= array(
+			 'code' => 600,
+			 'message' => 'Catalogo de usuarios incorrecto',
+			 'data' => 'Error' 
+		 );
+		 echo json_encode($respuesta_json);
 	 }
 
 }

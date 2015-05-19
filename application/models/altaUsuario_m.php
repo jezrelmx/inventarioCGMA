@@ -24,7 +24,9 @@ public function mostrarDireccionEjecutiva(){
 	$customQuery= "SELECT * FROM cat_direccion_ejecutiva;";
 	$resultado = $this->db->query($customQuery);
 	foreach ($resultado->result() as $row) {
-	$datos[$row->id_direccion_ejecutiva]['nombre'] = $row->nombre; 	
+
+		$datos[$row->id_direccion_ejecutiva]['id'] = $row->id_direccion_ejecutiva; 
+		$datos[$row->id_direccion_ejecutiva]['descripcion'] = $row->nombre; 	
 	}
 			if($resultado)
 				return $datos;
@@ -37,8 +39,10 @@ public function mostrarTipoUsuario(){
 	$customQuery= "SELECT * FROM cat_tipo_usuario;";
 	$resultado = $this->db->query($customQuery);
 	foreach ($resultado->result() as $row) {
-	$datos[$row->id_tipo_usuario]['descripcion'] = $row->descripcion;
-}
+		
+		$datos[$row->id_tipo_usuario]['id'] = $row->id_tipo_usuario;
+		$datos[$row->id_tipo_usuario]['descripcion'] = $row->descripcion;
+	}
 			if($resultado)
 				return $datos;
 			else
