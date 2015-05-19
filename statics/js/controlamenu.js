@@ -7,9 +7,9 @@ function controlaMenu(controlador) {
 			type: 'post',
 			data: '',
 			success: function (data) {
-					// alert(data);
+					//alert(data);
 				$('#bodyInterior').html(data);
-				alert(liga);
+				
 			},
 			error: function () {
 				alert('Te equivocaste mi buen');
