@@ -12,9 +12,9 @@ class Menu_c extends CI_Controller {
 
 	public function index()
 	{
-	$this->load->view('head_v','');	
-	$this->load->view('footer_v','');	
-	$this->load->view('body_menu_v','');
+		$this->load->view('head_v','');	
+		$this->load->view('footer_v','');	
+		$this->load->view('body_menu_v','');
 	}
 
 }
