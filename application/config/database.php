@@ -64,7 +64,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '192.168.3.105',
 	'username' => 'postgres',
 	'password' => 'Bere1507bb',
 	'database' => 'inventarioCGMA',

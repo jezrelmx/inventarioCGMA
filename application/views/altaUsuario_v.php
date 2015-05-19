@@ -2,8 +2,8 @@
 		<form action="" method="POST" role ="form">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 					<div class="form-group"> 
-					<strong><center><legend>Formulario Alta Usuario</legend></center><strong>
-						<br><label for="">Nombre</label>
+					<br><strong><center><legend>Formulario Alta Usuario</legend></center><strong>
+						<label for="">Nombre</label>
 						<input type="text" class="form-control" name="txtNombre" id="txtNombre" >
 					</div>
 					<div class="form-group">
@@ -56,10 +56,12 @@
 						<input type="Password" class="form-control"  name "txtContrasenia" id="txtContrasenia">
 					</div>
 				</div>
+				
 				<div class="modal-footer">
 					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 					<button type="button"  onclick ="guardarDatosUsuario()" class="btn btn-primary" >Guardar</button>
 				</div>
+				
 				</div></form>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->

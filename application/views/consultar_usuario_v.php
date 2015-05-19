@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
+	  <script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
 	  <h2>Usuarios registrados</h2>
 	    <pre>
 	    <?php 

@@ -17,22 +17,6 @@ class Menu_c extends CI_Controller {
 	$this->load->view('body_menu_v','');
 	}
 
-	public function altaArticulo()
-	{
-	//echo "estamos en alta articulo";
-	$this->load->view('alta','');	
-	}
-	public function altaUsuario()
-	{
-	//echo "estamos en alta articulo";
-	$this->load->view('articulo','');	
-	}
-	public function altaTipo()
-	{
-	//echo "estamos en alta articulo";
-	$this->load->view('alta_tipo_v','');	
-	}
-
 }
 
 /* End of file inventario_c.php */

@@ -10,20 +10,21 @@
 								          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
 								          <ul class="dropdown-menu">
 								            <li><a  href="#" onclick ="controlaMenu('altaUsuario_c/index')">Alta Usuario</a></li>
-								            <li><a  href="#" onclick= " controlaMenu('consultar_usuario_c/index')"> Consulta Usuario</a></li>                      
+								            <li><a  href="#" onclick= "controlaMenu('consultar_usuario_c/index')"> Consulta Usuario</a></li>                      
 								          </ul>
 								        </li>
 								      <li class="dropdown">  
 								      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articulos <span class="caret"></span></a>
 								      <ul class="dropdown-menu">
-								            <li><a href="#" onclick ="controlaMenu('menu_c/altaUsuario')"  >Alta Articulo</a></li>                       
+								            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo')"  >Alta Tipo Articulo</a></li> 
+								            <li><a href="#" onclick ="controlaMenu('altaArticulo_c/index')" >   Alta Articulos</a></li>                      
 								          </ul>
 								       </li>
 								       
 								      <li class="dropdown">   
 								      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
 								      <ul class="dropdown-menu">
-								            <li><a href="#"  onclick ="controlaMenu('menu_c/altaUsuario')" >Consulta Usuarios</a></li>
+								            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')" >Consulta Usuarios</a></li>
 								            <li><a href="#"  onclick ="controlaMenu('menu_c/altaUsuario')" >Consulta Articulos</a></li>
                         
 								          </ul>
