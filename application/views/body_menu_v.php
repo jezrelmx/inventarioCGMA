@@ -37,15 +37,15 @@
 					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
 					      <ul class="dropdown-menu">
 					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')" >Consulta Usuarios</a></li>
-					            <li><a href="#"  onclick ="controlaMenu('menu_c/altaUsuario')" >Consulta Articulos</a></li>
+					            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index')" >Consulta Articulos</a></li>
 		    
 					          </ul>
 					      </li>
 
-					       <br><br><div align="left">   
-					      	<ul>
-					           <button type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesion</button>
-					        </ul>
+					       <br><br><div align="text-left">   
+					      	
+					           <button align = "left" type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesion</button>
+					       
 					      </div>
 					    </ul>
 		            </ul>
