@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				$this-> load ->helper(array('url', 'html'));//puedo enlistar la lista de controladores que vaya a necesitar mediate comas
 				$this-> config ->base_url();
+				$this->load->library(array('user_agent'));
 				$this-> load ->model(array('altaArticulo_m'));//puedo enlistar la lista de modelos que vaya a necesitar mediate comas
 			}
 
@@ -98,20 +99,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			//echo ("resultado".$resultado);
 			if($resultado){
-			 	$respuesta_json= array(
-			 		'code' => 200,
-			 		'message' => 'Alta de articulo exitosa',
-			 		'data' => 'No aplica' 
-			 	 );
-				echo json_encode($respuesta_json);
+				if($this->agent->mobile()){
+					$respuesta_json= array(
+				 		'code' => 200,
+				 		'message' => 'Alta de articulo exitosa',
+				 		'data' => 'No aplica' 
+				 	 );
+					echo json_encode($respuesta_json);
+				}else{
+					//redirect(base_url.'consultarArticuloGral_c');
+				}	 	
 			 
 			}else{
-				$respuesta_json= array(
-			 		'code' => 600,
-			 		'message' => 'Fallo al dar de alta',
-			 		'data' => 'No aplica' 
-			 	 );
-				echo json_encode($respuesta_json);
+				if($this->agent->mobile()){
+					$respuesta_json= array(
+				 		'code' => 600,
+				 		'message' => 'Fallo al dar de alta',
+				 		'data' => 'No aplica' 
+				 	 );
+					echo json_encode($respuesta_json);
+				}else{
+					echo "No se realizo la inserción";
+				}
 			}
 		}//FinAltaArticulo
 	}//FinController

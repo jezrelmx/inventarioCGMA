@@ -32,7 +32,7 @@
 					<select class="form-control" id="direccion">
 						 <option value="0"></option>
 						 <?php foreach ($cat_direccion_ejecutiva as $key => $value) { ?>
-						 <option value="<?php echo $key;?>"><?php echo $value['nombre'];?></option>
+						 <option value="<?php echo $key;?>"><?php echo $value['descripcion'];?></option>
 						 <?php }?>
 					</select>
 					</div>
