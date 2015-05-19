@@ -10,7 +10,6 @@
 	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/index_js.js" ></script>
 </head>
 <body id ="cuerpo" onload="admin()">
-<?php echo base_url();?>Index_c/iniciar_sesion/iniciando_sesion
 		<div class="container-fluid">
 		  <div  class="row">
 		  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

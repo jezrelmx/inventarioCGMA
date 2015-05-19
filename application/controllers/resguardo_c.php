@@ -15,17 +15,17 @@ class Resguardo_c extends CI_Controller {
 		
 		//$this->load->view('index_v','');
 	}
-	public function resguardo($usuario=0){
+	public function resguardo($usuario=''){
 
 		//echo "Estoy en resguardo_c y el id es: ".$id_usuario;$
-		if ($usuario==0) {
+		if (strcmp($usuario, '')==0) {
 			$datos['usuario']=$this->index_m->buscar_usuario(FALSE,1);
 			$datos['resguardo']=$this->resguardo_m->obtener_resguardo(FALSE,1);
 		}else{
 			$datos['usuario']=$this->index_m->buscar_usuario($usuario);
 			$datos['resguardo']=$this->resguardo_m->obtener_resguardo($usuario);
 		}
-		if ($datos['usuario'] && $datos['resguardo']) {
+		if ($datos['usuario'] && ($datos['resguardo'] && !empty($datos['resguardo']))) {
 			if($this->agent->mobile()){
 
 				$arregloJSON = array(
@@ -49,7 +49,12 @@ class Resguardo_c extends CI_Controller {
 
 				echo json_encode($arregloJSON);
 			}else{
-				echo "Fallo la consulta de resguardo";
+				if (empty($datos['resguardo'])) {
+					echo "Usuario sin resguardo asignado";
+				}else{
+					echo "Fallo la consulta de resguardo";	
+				}
+				
 			}
 		}
 		
