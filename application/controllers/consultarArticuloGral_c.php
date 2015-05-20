@@ -15,7 +15,35 @@ class ConsultarArticuloGral_c extends CI_Controller {
 	{
 		$datos['cat_estatus']=$this->altaArticulo_m->traerEstatus();
 		$datos['listaArticulos']=$this->consultarArticuloGral_m->obtenerDatosArticulo();
-		$this->load->view('ConsultarArticuloGral_v',$datos);
+		
+		
+		if ($resultado) {
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 200,
+					"message" => "Listado de todos los artículo del inventario",
+					"data" => $datos['listaArticulos']
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				$this->load->view('ConsultarArticuloGral_v',$datos);
+			}
+			
+		}else{
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 600,
+					"message" => "No se pudo consultar la lista de artículos",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				echo "No se pudo consultar la lista de artículos";
+			}
+			
+		}
 	}
 
 	public function eliminarArticulo(){
