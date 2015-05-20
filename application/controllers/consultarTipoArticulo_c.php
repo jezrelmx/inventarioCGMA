@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			
 
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				if (!empty($datos['listaArticulos']) && $datos['listaArticulos']) {
 					$arregloJSON = array(
 						"code" => 200,
