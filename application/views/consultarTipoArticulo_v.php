@@ -1,10 +1,10 @@
 <div class="container">
-	 <h2>	Tipo de Articulos  </h2>
+	 <h2>	Tipo de Artículos  </h2>
 	 	<table border="1" class="table table-bordered">
 	    <thead>
 	      <tr>
-	        <th>Eliminar</th>
-	        <th>Tipo de Articulo</th>
+	        <th>Acciones</th>
+	        <th>Tipo de Artículo</th>
 	        <th>Clave</th>
 	        <th>Estatus</th>
 	      </tr>

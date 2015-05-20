@@ -2,32 +2,33 @@
 		<form action="" method="POST" role ="form">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 					<div class="form-group"> 
-					<br><strong><center><legend>Formulario Alta Usuario</legend></center><strong>
-						<label for="">Nombre</label>
-						<input type="text" class="form-control" name="txtNombre" id="txtNombre" >
+					<h2><center>Alta Usuario</h2></center>
+						
+					<label for="">Nombre</label>
+					<input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder = "Nombre" >
 					</div>
 					<div class="form-group">
-						<label for="">Apellido paterno</label>						
-						<input type="text" class="form-control" name="txtAp_paterno" id="txtAp_paterno" >
+						<label for="">Apellido Paterno</label>						
+						<input type="text" class="form-control" name="txtAp_paterno" id="txtAp_paterno" placeholder = "Apellido Paterno" >
 					</div>
 					<div class="form-group">
-						<label for="">Apellido materno</label>						
-						<input type="text" class="form-control" name="txtAp_materno" id="txtAp_materno">
+						<label for="">Apellido Materno</label>						
+						<input type="text" class="form-control" name="txtAp_materno" id="txtAp_materno" placeholder = "Apellido Materno">
 					</div>
 					<div class="form-group">
 						<label for="">Correo</label>						
-						<input type="text" class="form-control" name = "txtCorreo" id="txtCorreo">
+						<input type="text" class="form-control" name = "txtCorreo" id="txtCorreo" placeholder = "Correo">
 					</div>
 						<div class="form-group">
 						<label for="">Cargo</label>						
-						<input type="text" class="form-control" name ="txtCargo" id="txtCargo" >
+						<input type="text" class="form-control" name ="txtCargo" id="txtCargo" placeholder = "Cargo" >
 					</div>
 					<div class="form-group">
-						<label for="">No. de empleado</label>						
-						<input type="text" class="form-control" name = "txtNempleado" id="txtNempleado">
+						<label for="">No. De Empleado</label>						
+						<input type="text" class="form-control" name = "txtNempleado" id="txtNempleado" placeholder = "No. De Empleado">
 					</div>
 					<div class="form-group">
-					<label for="">Direccion ejecutiva</label>
+					<label for="">Dirección Ejecutiva</label>
 					<br>
 					<select class="form-control" id="direccion">
 						 <option value="0"></option>
@@ -37,7 +38,7 @@
 					</select>
 					</div>
 					<div class="form-group">
-					<label for="">Tipo usuario</label>
+					<label for="">Tipo Usuario</label>
 					<br>
 					<select  class="form-control" id="tipoUsuario">
 						 <option value="0"></option>
@@ -48,18 +49,18 @@
 					</div>
 					<div  class="form-group">
 					<label for="">Estatus</label>						
-					<input type="text" class="form-control"  name "txtEstatus" id="txtEstatus" >
+					<input type="text" class="form-control"  name "txtEstatus" id="txtEstatus" placeholder = "Estatus">
 					</div>	 
 
 					<div id="pass" class="form-group">
 						<label for="">Contraseña</label>						
-						<input type="Password" class="form-control"  name "txtContrasenia" id="txtContrasenia">
+						<input type="Password" class="form-control"  name "txtContrasenia" id="txtContrasenia" placeholder = "Contraseña">
 					</div>
 				</div>
 				
 				<div class="modal-footer">
-					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 					<button type="button"  onclick ="guardarDatosUsuario()" class="btn btn-primary" >Guardar</button>
+					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 				</div>
 				
 				</div></form>

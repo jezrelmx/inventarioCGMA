@@ -14,7 +14,7 @@ function guardarArticulo(){
 			success: function (data) {
 
 				//var JSON_resultado = JSON.parse(data);
-				alert(data);
+				//alert(data);
 				window.location = base + 'menu_c';
 				//redirect(base_url()."menu_c");
 				/*if (JSON_resultado.code == 200) {

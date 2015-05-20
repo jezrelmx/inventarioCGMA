@@ -2,7 +2,7 @@
 		<form action="" method="POST" role ="form">
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 					<div class="form-group"> 
-					<br><strong><center><legend>Formulario Alta Articulo</legend></center></strong>
+					<center><h2>Alta Artículo</h2></center>
 						<label> Tipo: </label>
 							<select class = "form-control" id="id_tipo_mueble">
 								<option value="0">Seleccionar tipo</option>
@@ -21,7 +21,7 @@
 					</div>
 				
 					<div class="form-group">
-						<label> Caracteristicas: </label>
+						<label> Características: </label>
 						<input type="text" class="form-control" name="txtCaracterisicas" id="txtCaracterisicas" placeholder="Caracteristicas del articulo">
 					<br>
 					</div>
@@ -38,8 +38,8 @@
 			</div>
 				
 				<div class="modal-footer">
-					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 					<button type="button"  onClick="guardarArticulo()" class="btn btn-primary" >Guardar</button>
+					<button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 				</div>
 				
 				</div></form>

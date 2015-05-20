@@ -25,7 +25,7 @@ class Alta_tipo_c extends CI_Controller {
 				if($resultado){
 					$arregloJSON = array(
 					"code" => 200,
-					"message" => "Se agregO tipo articulo",
+					"message" => "Se agrego tipo articulo",
 					"data" => 'No aplica',
 				);
 				}
