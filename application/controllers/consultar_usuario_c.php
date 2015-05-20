@@ -15,7 +15,7 @@ class Consultar_usuario_c extends CI_Controller {
 		$resultado=$this->consultar_usuario_m->obtener_usuario(0);
 		if ($resultado) {
 			$datos['resultado']=$resultado;
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 
 				"code" => 200,
@@ -30,7 +30,7 @@ class Consultar_usuario_c extends CI_Controller {
 
 				
 		}else {
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 				"code" => 600,
 				"message" => "No hay usuarios",
@@ -51,7 +51,7 @@ class Consultar_usuario_c extends CI_Controller {
 		$resultado=$this->consultar_usuario_m->eliminarUsuario($id_usuario);
 		if ($resultado) {
 			//$datos['resultado']=$resultado;
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 
 				"code" => 200,
@@ -66,7 +66,7 @@ class Consultar_usuario_c extends CI_Controller {
 
 				
 		}else {
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 				"code" => 600,
 				"message" => "El usuario no se pudo eliminar",
