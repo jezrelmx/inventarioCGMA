@@ -21,11 +21,11 @@ class Alta_tipo_c extends CI_Controller {
 	    $clave = $this->input->post('clave');
 		//echo "Estamos en el controlador guardarTipoArticulo";
 		$resultado = $this->alta_tipo_m->guardarTipoArticulo($descripcion, $clave);
-		if($this->agent->mobile()){
+		if($this->agent->mobile() && !$this->agent->is_browser()){
 				if($resultado){
 					$arregloJSON = array(
 					"code" => 200,
-					"message" => "Se agregO tipo articulo",
+					"message" => "Se agrego tipo articulo",
 					"data" => 'No aplica',
 				);
 				}

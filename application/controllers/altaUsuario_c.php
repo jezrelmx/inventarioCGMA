@@ -58,11 +58,12 @@ public function guardarDatosUsuario(){
 		$email = $this->input->post('email');
 		$contrasenia = $this->input->post('contrasenia');
 		$estatus = $this->input->post('estatus');
-		echo $nombre.'-app'.$ap_paterno.'-apm'.$ap_materno.'-cargo'.$cargo.'-numem'.$num_empleado.'-
-		'.'-ide'.$id_direccion_ejecutiva.'-dtu'.$id_tipo_usuario.'-email'.$email.'-pass'.$contrasenia.'-est'.$estatus;
+		//echo $nombre.'-app'.$ap_paterno.'-apm'.$ap_materno.'-cargo'.$cargo.'-numem'.$num_empleado.'-
+		//'.'-ide'.$id_direccion_ejecutiva.'-dtu'.$id_tipo_usuario.'-email'.$email.'-pass'.$contrasenia.'-est'.$estatus;
 		$resultado=$this->altaUsuario_m->guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia, $estatus);
 		 
 		if($resultado){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 		 	$respuesta_json= array(
 		 		'code' => 200,
 		 		'message' => 'Usuario registrado',
@@ -70,16 +71,22 @@ public function guardarDatosUsuario(){
 		 	 );
 			echo json_encode($respuesta_json);
 		 
+			}else{
+				//redirecter(base_url.'menu_c')
+			}
 		}else{
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 			$respuesta_json= array(
-		 		'code' => 500,
+		 		'code' => 600,
 		 		'message' => 'Usuario no registrado',
 		 		'data' => 'No aplica' 
 		 	 );
 			echo json_encode($respuesta_json);
-		}
-
-}
+			}else{
+			echo "El usuario no ha sido registrado";
+			}
+		}//if principal
+}//fin de funcion guardar
 
 public function mostrarTipoUsuario(){
 	$tipoUsuario=$this->altaUsuario_m->mostrarTipoUsuario();

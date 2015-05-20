@@ -1,10 +1,11 @@
-<div class="container">
-	 <h2>	Tipo de Articulos  </h2>
+<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<center><h2>Tipo de Artículos </h2></center>
 	 	<table border="1" class="table table-bordered">
+	    
 	    <thead>
 	      <tr>
-	        <th>Eliminar</th>
-	        <th>Tipo de Articulo</th>
+	        <th>Acciones</th>
+	        <th>Tipo de artículo</th>
 	        <th>Clave</th>
 	        <th>Estatus</th>
 	      </tr>
@@ -23,6 +24,3 @@
 	    </tbody>
 	  </table>
 </div><!--FinDivPrincipal-->
-
-<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/jquery.js"></script>
-<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/consultarTipoArticulo.js"></script>

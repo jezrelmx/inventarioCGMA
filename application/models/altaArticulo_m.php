@@ -53,6 +53,4 @@ class AltaArticulo_m extends CI_Model{
 			}
 
 		}//FinAltaArticulo
-}
- ?>
-
+}?>

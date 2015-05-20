@@ -94,12 +94,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$progresivo = $this->input->post('progresivo');
 			$caracteristicas = $this->input->post('caracteristicas');
 			$idEstatus = $this->input->post('id_estatus');
-			//echo ('aaa'.$idTipoMueble.$progresivo.$caracteristicas.$idEstatus);
+
 			$resultado = $this->altaArticulo_m->guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus);
 			
-			//echo ("resultado".$resultado);
 			if($resultado){
-				if($this->agent->mobile()){
+				if($this->agent->mobile() && !$this->agent->is_browser()){
 					$respuesta_json= array(
 				 		'code' => 200,
 				 		'message' => 'Alta de articulo exitosa',
@@ -107,11 +106,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				 	 );
 					echo json_encode($respuesta_json);
 				}else{
-					//redirect(base_url.'consultarArticuloGral_c');
+					redirect(base_url().'consultarArticuloGral_c');
 				}	 	
 			 
 			}else{
-				if($this->agent->mobile()){
+				if($this->agent->mobile() && !$this->agent->is_browser()){
 					$respuesta_json= array(
 				 		'code' => 600,
 				 		'message' => 'Fallo al dar de alta',
@@ -119,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				 	 );
 					echo json_encode($respuesta_json);
 				}else{
-					echo "No se realizo la inserción";
+					echo "No se realizo la inserción del articulo";
 				}
 			}
 		}//FinAltaArticulo

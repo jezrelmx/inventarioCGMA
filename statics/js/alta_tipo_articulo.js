@@ -11,7 +11,8 @@ function guardarTipoArticulo(){
 						type: 'post',
 						data: datosJSON,
 						success: function (data) {
-							 	alert(data);							 					
+							 	alert(data);	
+							 	$('#bodyInterior').html(base + "consultarTipoArticulo_c/consultarTipoArticulo");						 					
 						},
 						error: function (data) {
 							alert('Datos no guardados');

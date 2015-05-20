@@ -1,5 +1,4 @@
 <body>
-
 <div class="container">
 	<div class = "row">
 		<div class = "form-group col-xs-12 col-md-3 col-sm-12 col-lg-3">
@@ -12,12 +11,12 @@
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		            </button>
-		             <a class="navbar-brand" href="#">Inventario CGMA</a>
+	             <a class="navbar-brand" href="#" >Inventario CGMA</a>
 		          </div>
 		          <div id="navbar" class="navbar-collapse collapse">
 		            <ul class="nav navbar-nav">
 		             	<ul class="nav nav-pills nav-stacked">
-					        <li class="active"><a href="#" onclick = "menu_c/index">Bienvenido</a></li>
+					        <li class="active"><a href="#" onclick = "menu_c/index" class="ex3">Bienvenido</a></li>
 					        <li class="dropdown">
 					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
 					          <ul class="dropdown-menu">
@@ -26,25 +25,26 @@
 					          </ul>
 					        </li>
 					      <li class="dropdown">  
-					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articulos <span class="caret"></span></a>
+					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Artículos <span class="caret"></span></a>
 					      <ul class="dropdown-menu">
-					            <li><a href="#" onclick ="controlaMenu('altaArticulo_c/index')" >   Alta Articulos</a></li>                      
-					            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo')"  >Alta Tipo Articulo</a></li> 
+					            <li><a class ="color" href="#" onclick ="controlaMenu('altaArticulo_c/index')" >   Alta Artículos</a></li>                      
+					            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo')"  >Alta Tipo Artículo</a></li> 
 					          </ul>
 					       </li>
 					       
 					      <li class="dropdown">   
 					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
 					      <ul class="dropdown-menu">
-					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')" >Consulta Usuarios</a></li>
-					            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index')" >Consulta Articulos</a></li>
+					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')">Consulta Resguardo</a></li>
+					            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index')" >Consulta Artículos</a></li>
+					             <li><a href="#"  onclick ="controlaMenu('consultarTipoArticulo_c/consultarTipoArticulo')" >Consulta Tipo Artículos</a></li>
 		    
 					          </ul>
 					      </li>
 
 					       <br><br><div align="text-left">   
 					      	
-					           <button align = "left" type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesion</button>
+					           <button align = "left" type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesión</button>
 					       
 					      </div>
 					    </ul>
