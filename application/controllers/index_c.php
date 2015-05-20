@@ -47,7 +47,7 @@ class Index_c extends CI_Controller {
 			}else if($resultado[0]['id_tipo_usuario']==2){
 				//usuario servidor público
 				//$id_usuario=$resultado[0]['id_usuario'];
-				redirect(base_url()."resguardo_c/resguardo/".$usuario);				
+				redirect(base_url()."resguardo_c/resguardo/".$usuario.'/'.$resultado[0]['id_tipo_usuario']);				
 			}else{
 				echo "El tipo de usuario no existe";
 			}

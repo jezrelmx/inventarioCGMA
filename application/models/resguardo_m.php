@@ -9,18 +9,21 @@ class Resguardo_m extends CI_Model {
 
 	public function obtener_resguardo($usuario){
 		
-		$sql_query="select u.id_usuario,c_t_m.descripcion as tipo, c_t_m.estatus, c_t_m.clave, art.progresivo, art.caracteristicas, c_e.descripcion 
+		$sql_query="select u.id_usuario, u.nombre || ' ' ||  u.ap_paterno as nombre,  u.num_empleado, u.cargo, cdir.nombre as direccion,c_t_m.descripcion as tipo, c_t_m.estatus, c_t_m.clave, art.progresivo, 
+					art.caracteristicas, c_e.descripcion
 					from cat_tipo_mueble c_t_m
 					inner join articulos art on(art.id_tipo_mueble=c_t_m.id_tipo_mueble)
 					inner join cat_estatus c_e on(c_e.id_estatus=art.id_estatus)
 					inner join usuario_has_articulo u_h_a on(u_h_a.id_articulo=art.id_articulo)
-					inner join usuarios u on(u.id_usuario=u_h_a.id_usuario)";
+					inner join usuarios u on(u.id_usuario=u_h_a.id_usuario)
+					inner join cat_direccion_ejecutiva cdir on (cdir.id_direccion_ejecutiva=u.id_direccion_ejecutiva)";
 		if($usuario){			
-			$sql_query.="where u.email='".$usuario."'";
-		}else{
-			$sql_query.="where c_t_m.estatus=1 ;";
+			$sql_query.="where u.email='".$usuario."' ";
+		}else{ 
+			$sql_query.="where c_t_m.estatus=1 ";
 
 		}
+		$sql_query.=" order by u.id_usuario;";
 		$resultado = $this->db->query($sql_query);
 		if ($resultado) {
 			if ($resultado->num_rows()>0 ) {

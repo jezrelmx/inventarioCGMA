@@ -32,7 +32,7 @@
 		    			echo "<td>".$val['ap_paterno']."</td>";
 		    			echo "<td>".$val['ap_materno']."</td>";
 		    			echo "<td>".$val['num_empleado']."</td>";
-		    			echo "<td>".$val['id_direccion_ejecutiva']."</td>";
+		    			echo "<td>".$val['nom_direccion']."</td>";
 		    			echo "<td>".$val['email']."</td>";
 		    			
 		    			

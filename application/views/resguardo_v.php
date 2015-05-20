@@ -1,30 +1,41 @@
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
-	  <h2>Resguardo</h2>
-	    <?php $bandera=0;?>     
 
-	<?php 
-	    foreach ($usuario as $key =>$val) {
+	 <p align="right">
+	  <?php if($usr_sesion==2){
+
+	  	?>
+	  	<script>
+			var base = "<?php echo base_url();?>";
+		</script>
+	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/cerrar_sesion.js" ></script>
+	  	<br>
+		<button align = "left" type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesion</button>
+		<?php }
+		?>
+		
+	  		<h2>Resguardo</h2>
+	  </p>
+	    <?php $bandera=0;     
+			$id_usuario=0;
+		?>
+	<?php foreach ($resguardo as $key => $val) {
 	    	$sin_resguardo=1;
-	    	?>
-	    	<br> <div>
-	    	<?php echo "
-		    
-		      	<label>Nombre: ".$val['nombre']." ".$val['ap_paterno']." ".$val['ap_materno']."</label>
-		      	<br>
-		        <label>Número de empleado: ".$val['num_empleado']."</label>
-		        <br>
-		        <label>Direccion ejecutiva: ".$val['nom_direccion']."</label>
-		        <br>
-		        <label>Cargo: ".$val['cargo']."</label>
-			    ";
-			    
-				foreach ($resguardo as $key1 =>$val1){   			
-
-		    			if($val['id_usuario']==$val1['id_usuario']){
-		    				$num_inventario=$val1['clave']."-".$val1['progresivo'];
-		    				if($bandera==0){
-				    			echo "<br><table border='1' class='table table-bordered'>
+	    	if($id_usuario!=$val['id_usuario']){ 
+	    		$id_usuario=$val['id_usuario']; ?>
+	    		<div>
+    				<label>Nombre: <?php echo $val['nombre']; ?> </label>
+			      	<br>
+			        <label>Número de empleado: <?php echo $val['num_empleado']; ?></label>
+			        <br>
+			        <label>Direccion ejecutiva: <?php echo $val['direccion']; ?></label>
+			        <br>
+			        <label>Cargo: <?php echo $val['cargo']; ?></label>	
+	    	<?php }
+	    		$num_inventario=$val['clave']."-".$val['progresivo'];
+	    		if($bandera==0){ ?>
+				    			<br>
+				    			<table border='1' class='table table-bordered'>
 							    <thead>
 							      <tr>
 							      	<th>Número de Inventario</th>
@@ -33,39 +44,29 @@
 							        <th>Estatus</th>
 							      </tr>
 							    </thead>
-							    <tbody>";
-							    $bandera=1;
-							}else{
-			    			echo "<tr>
-								<td>".$num_inventario."</td>
-				    			<td>".$val1['tipo']."</td>
-				    			<td>".$val1['caracteristicas']."</td>
-				    			<td>".$val1['descripcion']."</td>
-				    			";
-								echo "</tr>";
-							}
-						}else{
-							if($bandera==1){
-								echo "
-								</tbody>
-								</table>
-								";
-								$bandera=0;
-							}else{
-								$sin_resguardo=0;
-							}
-						}
-			    		
-		    		}
+							    <tbody>
+							    <tr>
+									<td><?php echo $num_inventario; ?></td>
+					    			<td><?php echo $val['tipo']; ?></td>
+					    			<td><?php echo $val['caracteristicas']; ?></td>
+					    			<td><?php echo $val['descripcion']; ?></td>
+					    		</tr>
+					<?php $bandera=1;
+							}else{ ?>
+			    			<tr>
+								<td><?php echo $num_inventario; ?></td>
+				    			<td><?php echo $val['tipo']; ?></td>
+				    			<td><?php echo $val['caracteristicas']; ?></td>
+				    			<td><?php echo $val['descripcion']; ?></td>
+				    		</tr>
+						<?php } ?>
+			<?php if(isset($resguardo[$key+1]['id_usuario']) && $id_usuario!=$resguardo[$key+1]['id_usuario']){ 
+					$bandera=0;
+				?>
+				   		</tbody>
+						</table>
+				    </div> 
+			<?php } ?>
+		<?php } ?>
+</div><!--Fin wrapper-->
 
-		    	if ($sin_resguardo==0) {
-		    		 echo "<br>El usuario no tiene resguardo<br>";
-
-		    	}
-				 
-			echo "</div><!--Fin usuario-->";	
-		}
-	 ?>
-	  
-
-</div>

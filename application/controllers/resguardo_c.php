@@ -15,9 +15,10 @@ class Resguardo_c extends CI_Controller {
 		
 		//$this->load->view('index_v','');
 	}
-	public function resguardo($usuario=''){
+	public function resguardo($usuario='',$tipo_usuario=0){
 
 		//echo "Estoy en resguardo_c y el id es: ".$id_usuario;$
+		$datos['usr_sesion']=$tipo_usuario;
 		if (strcmp($usuario, '')==0) {
 			$datos['usuario']=$this->index_m->buscar_usuario(FALSE,1);
 			$datos['resguardo']=$this->resguardo_m->obtener_resguardo(FALSE,1);
@@ -36,6 +37,9 @@ class Resguardo_c extends CI_Controller {
 
 				echo json_encode($arregloJSON);
 			}else{
+				if ($tipo_usuario==2) {
+					$this->load->view('head_v','');
+				}
 				$this->load->view('resguardo_v',$datos);
 			}
 		}else{

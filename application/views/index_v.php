@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 	<head>
-	<title>INICIAR SESSION</title>
+	<title>INICIAR SESION</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="<?php echo base_url();?>statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -11,7 +11,7 @@
 		<div class="container-fluid">
 		  <div  class="row">
 		  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		  		<h1 class="text-center">INICIA SESION</h1>
+		  		<h1 class="text-center">INICIA SESIÓN</h1>
 		  		<center><legend>Inventario </legend></center>
 		  	</div>
 		  </div>
