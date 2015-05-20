@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				 	 );
 					echo json_encode($respuesta_json);
 				}else{
-					//redirect(base_url.'consultarArticuloGral_c');
+					redirect(base_url().'consultarArticuloGral_c');
 				}	 	
 			 
 			}else{
