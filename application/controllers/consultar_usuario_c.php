@@ -110,33 +110,9 @@ class Consultar_usuario_c extends CI_Controller {
 			}
 		}
 	}
-	public function usuario_email(){
-		$usuario=$this->input->post('email');
-		$resultado=$this->index_m->buscar_usuario($usuario,1);
-		if ($resultado) {
-			if($this->agent->mobile() && !$this->agent->is_browser()){
-				$arregloJSON = array(
-				"code" => 200,
-				"message" => "Lista de usuarios",
-				"data" => $resultado
-				 );
-				echo json_encode($arregloJSON);
-			}
-
-				
-		}else {
-			if($this->agent->mobile() && !$this->agent->is_browser()){
-				$arregloJSON = array(
-				"code" => 600,
-				"message" => "No hay usuarios",
-				"data" => "no aplica" 
-				);
-				echo json_encode($arregloJSON);
-			}
-		}
-	}
+	
 	/*Elimina usuario por email recibe email por post ALEJ*/
-	public function eliminarUsuario(){
+	public function eliminarUsuarioEmail(){
 		
 		$email=$this->input->post('email');
 		$resultado=$this->consultar_usuario_m->eliminarUsuarioEmail($email);
