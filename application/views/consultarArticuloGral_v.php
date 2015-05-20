@@ -1,13 +1,13 @@
 <div  id="divQuitar" class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 			<table class="table table-bordered" class="table table-striped">
-		    <thead title="">
+		    <thead>
 		      <tr>
 		      	<th>Eliminar</th>
 		        <th>Tipo</th>
 		        <th>Caracteristicas</th>
 		        <th>Número de inventario</th>
 		        <th>Estatus</th>
-		        <th>Nombre del servidor público</th>
+		        <th>Nombre del servidor público</th> 
 		        <th>Número de empleado</th>
 		      </tr>
 		    </thead>
@@ -38,6 +38,3 @@
 		
 				</div>
 </div><!--FinDivGeneral-->
-
-
-
