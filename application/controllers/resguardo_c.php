@@ -13,7 +13,7 @@ class Resguardo_c extends CI_Controller {
 
 	public function index(){
 		
-		//$this->load->view('index_v','');
+		$this->load->view('index_v','');
 	}
 	public function resguardo($usuario='',$tipo_usuario=0){
 

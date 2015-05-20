@@ -43,7 +43,7 @@
 					      <li class="dropdown">   
 					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
 					      <ul class="dropdown-menu">
-					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo')">Consulta Resguardo</a></li>
+					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo/')">Consulta Resguardo</a></li>
 					            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index')" >Consulta Artículos</a></li>
 					             <li><a href="#"  onclick ="controlaMenu('consultarTipoArticulo_c/consultarTipoArticulo')" >Consulta Tipo Artículos</a></li>
 		    

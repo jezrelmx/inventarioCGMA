@@ -14,7 +14,7 @@
 		<?php }
 		?>
 		
-	  		<h2>Resguardo</h2>
+	  		<center><h2>Resguardo</h2></center>
 	  </p>
 	    <?php $bandera=0;     
 			$id_usuario=0;
