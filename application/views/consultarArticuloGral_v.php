@@ -6,10 +6,10 @@
 		      	<th>Acciones</th>
 		        <th>Tipo</th>
 		        <th>Características</th>
-		        <th>Número De Inventario</th>
+		        <th>Número de inventario</th>
 		        <th>Estatus</th>
-		        <th>Nombre Del Servidor Público</th>
-		        <th>Número de Empleado</th>
+		        <th>Nombre del servidor público</th>
+		        <th>Número de empleado</th>
 		      </tr>
 		    </thead>
 		     <tbody>

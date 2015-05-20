@@ -14,10 +14,10 @@
 	      <tr>
 	      <th>Acciones</th>
 	        <th>Nombre</th>
-	        <th>Apellido Paterno</th>
-	        <th>Apellido Materno</th>
+	        <th>Apellido paterno</th>
+	        <th>Apellido materno</th>
 	        <th># Empleado</th>
-	        <th>Dirección Ejecutiva</th>
+	        <th>Dirección ejecutiva</th>
 	        <th>Correo</th>
 	        
 

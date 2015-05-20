@@ -8,11 +8,11 @@
 					<input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder = "Nombre" >
 					</div>
 					<div class="form-group">
-						<label for="">Apellido Paterno</label>						
+						<label for="">Apellido paterno</label>						
 						<input type="text" class="form-control" name="txtAp_paterno" id="txtAp_paterno" placeholder = "Apellido Paterno" >
 					</div>
 					<div class="form-group">
-						<label for="">Apellido Materno</label>						
+						<label for="">Apellido materno</label>						
 						<input type="text" class="form-control" name="txtAp_materno" id="txtAp_materno" placeholder = "Apellido Materno">
 					</div>
 					<div class="form-group">
@@ -24,11 +24,11 @@
 						<input type="text" class="form-control" name ="txtCargo" id="txtCargo" placeholder = "Cargo" >
 					</div>
 					<div class="form-group">
-						<label for="">No. De Empleado</label>						
+						<label for="">No. de empleado</label>						
 						<input type="text" class="form-control" name = "txtNempleado" id="txtNempleado" placeholder = "No. De Empleado">
 					</div>
 					<div class="form-group">
-					<label for="">Dirección Ejecutiva</label>
+					<label for="">Dirección ejecutiva</label>
 					<br>
 					<select class="form-control" id="direccion">
 						 <option value="0"></option>
@@ -38,7 +38,7 @@
 					</select>
 					</div>
 					<div class="form-group">
-					<label for="">Tipo Usuario</label>
+					<label for="">Tipo usuario</label>
 					<br>
 					<select  class="form-control" id="tipoUsuario">
 						 <option value="0"></option>

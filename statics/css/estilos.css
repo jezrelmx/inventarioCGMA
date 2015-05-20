@@ -4,3 +4,7 @@
   padding-bottom: 15px;
   margin-bottom: 20px;
   }
+  a.color:active a.color:hover {
+	background: blue;
+	font-weight: bold;
+}
