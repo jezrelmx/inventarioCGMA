@@ -7,4 +7,16 @@
   a.color:active a.color:hover {
 	background: blue;
 	font-weight: bold;
+} 
+
+#fuente{
+	font-size: 40px ;
+	color: #FFFFFF;
+	text-align: bottom;
+	margin-left: 20%;
+}
+
+#header{
+	background-color:#ec2383;
+	padding:10px;
 }
