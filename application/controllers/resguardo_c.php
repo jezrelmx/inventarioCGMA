@@ -26,7 +26,7 @@ class Resguardo_c extends CI_Controller {
 			$datos['resguardo']=$this->resguardo_m->obtener_resguardo($usuario);
 		}
 		if ($datos['usuario'] && ($datos['resguardo'] && !empty($datos['resguardo']))) {
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 
 				$arregloJSON = array(
 					"code" => 200,
@@ -39,7 +39,7 @@ class Resguardo_c extends CI_Controller {
 				$this->load->view('resguardo_v',$datos);
 			}
 		}else{
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 
 				$arregloJSON = array(
 					"code" => 600,

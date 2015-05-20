@@ -26,7 +26,7 @@ class Index_c extends CI_Controller {
 			if($resultado[0]['id_tipo_usuario']==1 && strcmp($contrasenia, '')>0 && strcmp($contrasenia,$resultado[0]['contrasenia'])==0){
 				$tipo_usuario=$resultado[0]['id_direccion_ejecutiva'];
 	
-				if($this->agent->mobile()){
+				if($this->agent->mobile() && !$this->agent->is_browser()){
 					unset($resultado[0]['contrasenia']);
 
 					$arregloJSON = array(
@@ -53,7 +53,7 @@ class Index_c extends CI_Controller {
 			}
 			
 		}else{
-			if($this->agent->mobile()){
+			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 				"code" => 600,
 				"message" => "Verifique usuario y contraseña",

@@ -6,8 +6,9 @@
 	<?php 
 	    foreach ($usuario as $key =>$val) {
 	    	$sin_resguardo=1;
-	    	echo "<br> <div>
-	    	
+	    	?>
+	    	<br> <div>
+	    	<?php echo "
 		    
 		      	<label>Nombre: ".$val['nombre']." ".$val['ap_paterno']." ".$val['ap_materno']."</label>
 		      	<br>
@@ -34,18 +35,15 @@
 							    </thead>
 							    <tbody>";
 							    $bandera=1;
-							}
+							}else{
 			    			echo "<tr>
-
-			    				
-				    			<td>".$num_inventario."</td>
+								<td>".$num_inventario."</td>
 				    			<td>".$val1['tipo']."</td>
 				    			<td>".$val1['caracteristicas']."</td>
 				    			<td>".$val1['descripcion']."</td>
 				    			";
-				    			
-				    			
-							echo "</tr>";
+								echo "</tr>";
+							}
 						}else{
 							if($bandera==1){
 								echo "
@@ -59,11 +57,13 @@
 						}
 			    		
 		    		}
+
 		    	if ($sin_resguardo==0) {
 		    		 echo "<br>El usuario no tiene resguardo<br>";
+
 		    	}
 				 
-			echo "</div><!--Fin usuario-->";
+			echo "</div><!--Fin usuario-->";	
 		}
 	 ?>
 	  
