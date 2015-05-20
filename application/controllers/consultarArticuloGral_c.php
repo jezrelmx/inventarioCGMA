@@ -6,6 +6,7 @@ class ConsultarArticuloGral_c extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(array('url','html'));
+		$this->load->library(array('user_agent'));
 		$this->config->base_url();
 		$this->load->model(array('consultarArticuloGral_m','altaArticulo_m'));
 	}
@@ -22,9 +23,31 @@ class ConsultarArticuloGral_c extends CI_Controller {
 		$resultado=$this->consultarArticuloGral_m->eliminarArticulo($id_articulo);
 
 		if ($resultado) {
-			$this->index();
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 200,
+					"message" => "Se elimino correctamente",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				$this->index();	
+			}
+			
 		}else{
-			echo "No se elimino correctamente";
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 600,
+					"message" => "No se elimino correctamente",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				echo "No se elimino correctamente";
+			}
+			
 		}
 	}
 }
