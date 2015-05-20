@@ -9,7 +9,6 @@
 									<?php foreach ($cat_tipo as $key => $value) { ?>
 									<option value="<?php echo $key;?>"><?php echo $value['descripcion'];?></option>
 									<?php }?>
-								<option onclick="divFormTipo()">Otro...</option>
 							</select>
 					</div>
 					<br>

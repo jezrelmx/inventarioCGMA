@@ -29,7 +29,8 @@ function guardarDatosUsuario(){
 						type: 'post',
 						data: datosJSON,
 						success: function (data) {
-							 	alert(data);							 					
+							 	//alert(data);
+							 	$("#bodyInterior").html(data);							 					
 						},
 						error: function (data) {
 							//alert('Datos no guardados');

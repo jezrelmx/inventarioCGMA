@@ -8,6 +8,7 @@ class AltaArticulo_m extends CI_Model{
 		}
 
 		public function traerTipos(){
+			$datos=array();
 			$customQuery =  $this->db->query("SELECT * FROM cat_tipo_mueble WHERE estatus='1'");
 
 			foreach ($customQuery->result() as $row) {

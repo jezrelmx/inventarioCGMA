@@ -72,7 +72,7 @@ public function guardarDatosUsuario(){
 			echo json_encode($respuesta_json);
 		 
 			}else{
-				//redirecter(base_url.'menu_c')
+				redirect(base_url().'consultar_usuario_c');
 			}
 		}else{
 			if($this->agent->mobile() && !$this->agent->is_browser()){
