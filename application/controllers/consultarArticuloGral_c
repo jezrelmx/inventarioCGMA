@@ -1,0 +1,17 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+class AltaUsuario_c extends CI_Controller {
+
+ function __construct(){
+
+ parent::__construct();
+
+ $this-> load ->helper(array('url', 'html'));
+ $this-> load-> library('user_agent');
+ $this-> config ->base_url();
+ $this-> load ->model(array('consultarArticuloGral_m'));
+ }
+
+?>

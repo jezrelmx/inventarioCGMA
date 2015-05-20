@@ -1,0 +1,13 @@
+#divContenido{
+width: 800px;
+padding-left:100px;
+
+margin: 0 auto;
+
+}
+#df {
+	 float: left;
+}
+#df1 {
+	 float: right;
+}
