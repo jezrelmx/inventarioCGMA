@@ -5,17 +5,19 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="<?php echo base_url();?>statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="<?php echo base_url();?>statics/css/index_estilos.css" rel="stylesheet" type="text/css" media="screen"/>
 	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/index_js.js" ></script>
 </head>
 <body id ="cuerpo" onload="admin()">
-		<div class="container-fluid">
+		<div  class="container-fluid">
 		  <div  class="row">
 		  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		  		<h1 class="text-center">INICIA SESIÓN</h1>
-		  		<center><legend>Inventario </legend></center>
+		  		<center><legend>Inventario CGMA </legend></center>
 		  	</div>
 		  </div>
 		  <div id="divContenido" class="row">
+
 		  	<div  id="divQuitar" class="col-xs-6 col-sm-8 col-md-10 col-lg-12">
 				
 				<form name="inicia_sesion" id="inicia_sesion" method="post"
@@ -36,11 +38,19 @@
 					</div>
 					<center><button type="submit" class="btn btn-primary">Entrar</button></center>
 				</form>
+				<br>
+				<legend>
+				</legend>
+		
+				<img id="df" src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png"/>
+				<img id="df1" src="<?php echo base_url();?>statics/img/om-gray.png"/>
 		  	</div>
 		  </div>
 		</div>
-		<!-- jQuery -->
+		<br>
 		
+				
+	
 
 	</body>
 </html>
