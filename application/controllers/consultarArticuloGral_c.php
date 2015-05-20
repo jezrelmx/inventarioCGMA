@@ -17,7 +17,7 @@ class ConsultarArticuloGral_c extends CI_Controller {
 		$datos['listaArticulos']=$this->consultarArticuloGral_m->obtenerDatosArticulo();
 		
 		
-		if ($resultado) {
+		if ($datos['listaArticulos']) {
 			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 					"code" => 200,
