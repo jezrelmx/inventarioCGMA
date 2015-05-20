@@ -94,7 +94,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$progresivo = $this->input->post('progresivo');
 			$caracteristicas = $this->input->post('caracteristicas');
 			$idEstatus = $this->input->post('id_estatus');
-
 			$resultado = $this->altaArticulo_m->guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus);
 			
 			if($resultado){
