@@ -10,8 +10,6 @@
 		        <th>Estatus</th>
 		        <th>Nombre Del Servidor Público</th>
 		        <th>Número de Empleado</th>
-		        <th>Nombre del servidor público</th> 
-		        <th>Número de empleado</th>
 		      </tr>
 		    </thead>
 		     <tbody>

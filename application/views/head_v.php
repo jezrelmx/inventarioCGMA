@@ -5,6 +5,6 @@
 	<link rel="stylesheet" type="text/css" media = "screen" href="<?php echo base_url();?>statics/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" media = "screen" href="<?php echo base_url();?>statics/css/estilos.css">
 	<title>Menu Inventario</title>
-
+	<img scr="C:/xampp/htdocs/inventarioCGMA/statics/imgcdmx-gray.png">
 </head>
 
