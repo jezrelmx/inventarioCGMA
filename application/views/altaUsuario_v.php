@@ -47,10 +47,12 @@
 						 <?php }?>
 				    </select>
 					</div>
+					<!--
 					<div  class="form-group">
 					<label for="">Estatus</label>						
 					<input type="text" class="form-control"  name "txtEstatus" id="txtEstatus" placeholder = "Estatus">
-					</div>	 
+					</div>	
+					!--> 
 
 					<div id="pass" class="form-group">
 						<label for="">Contraseña</label>						
