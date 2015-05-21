@@ -92,10 +92,12 @@ class Consultar_usuario_c extends CI_Controller {
 
 				"code" => 200,
 				"message" => "Lista de usuarios",
-				"data" => $resultado
+				"data" => $resultado[0]
 				 );
 
 				echo json_encode($arregloJSON);
+			}else{
+				print_r($resultado[0]);
 			}
 				
 		}else {
