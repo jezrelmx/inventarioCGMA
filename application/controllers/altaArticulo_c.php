@@ -94,7 +94,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$progresivo = $this->input->post('progresivo');
 			$caracteristicas = $this->input->post('caracteristicas');
 			$idEstatus = $this->input->post('id_estatus');
-			$resultado = $this->altaArticulo_m->guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus);
+			$email = $this->input->post('email');
+
+			$resultado = $this->altaArticulo_m->guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus,$email);
 			
 			if($resultado){
 				if($this->agent->mobile() && !$this->agent->is_browser()){
@@ -117,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				 	 );
 					echo json_encode($respuesta_json);
 				}else{
-					echo "No se realizo la inserción del articulo";
+					echo "No se realizo la inserción del artículo verifique los datos y si el email existe";
 				}
 			}
 		}//FinAltaArticulo

@@ -34,6 +34,11 @@
 								<?php }?>
 							</select>
 					</div>
+					<div class="form-group">
+						<label> Email de servidor responsable: </label>
+						<input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="email">
+					<br>
+					</div>
 			</div>
 				
 				<div class="modal-footer">

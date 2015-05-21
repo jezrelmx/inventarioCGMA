@@ -40,12 +40,31 @@ class AltaArticulo_m extends CI_Model{
 		
 		}//FinTraerTipos
 
-		public function guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus){
+		public function guardarArticulo($idTipoMueble, $progresivo, $caracteristicas, $idEstatus,$email){
+			$resultado=FALSE;
+			if(strcmp($email,'0')==0){
+				$customQuery = "INSERT INTO articulos(id_tipo_mueble, progresivo, caracteristicas, id_estatus) VALUES (".$idTipoMueble.", ".$progresivo.",'".$caracteristicas."' , ".$idEstatus.");";
+				$resultado = $this->db->query($customQuery);
+			}else{		
 
-			$customQuery = "INSERT INTO articulos(id_tipo_mueble, progresivo, caracteristicas, id_estatus) VALUES (".$idTipoMueble.", ".$progresivo.",'".$caracteristicas."' , ".$idEstatus.");";
-			//echo $customQuery;
-			$resultado = $this->db->query($customQuery);
-			
+				$selectUsr="SELECT id_usuario FROM usuarios where email='".$email."'";
+				$usuario = $this->db->query($selectUsr);
+				if($usuario){
+					if ($usuario->num_rows()>0 ) {
+						foreach ( $usuario->result() as $row){
+							$id_usuario= $row->id_usuario;
+						}
+
+						$customQuery = "INSERT INTO articulos(id_tipo_mueble, progresivo, caracteristicas, id_estatus) VALUES (".$idTipoMueble.", ".$progresivo.",'".$caracteristicas."' , ".$idEstatus.");";
+						$resultado = $this->db->query($customQuery);
+						$id_articulo=$this->db->insert_id();
+
+						$customQuery = "INSERT INTO usuario_has_articulo(id_usuario, id_articulo) VALUES (".$id_usuario.", ".$id_articulo.");";
+						$resultado = $this->db->query($customQuery);
+					}
+				}
+
+			}
 	
 			if ($resultado) {
 				return true;
