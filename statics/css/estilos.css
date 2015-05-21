@@ -5,11 +5,6 @@
   margin-bottom: 20px;
   }
 
-	a.color:active a.color:hover {
-		background: blue;
-		font-weight: bold;
-	} 
-
 #fuente{
 	font-size: 40px ;
 	color: #FFFFFF;
@@ -22,3 +17,4 @@
 	padding:10px;
 	text-shadow:5px 5px 5px #000;
 }
+

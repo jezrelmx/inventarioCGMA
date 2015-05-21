@@ -9,9 +9,9 @@
 </header><!-- /header -->
 <div class="container">
 	<div class = "row">
-		<div class = "form-group col-xs-12 col-md-3 col-sm-12 col-lg-3">
-			<nav class="navbar navbar-default" style="margin-left: -43px;">
-		        <div class="container-fluid">
+		<div class = "form-group col-xs-12 col-md-2 col-sm-12 col-lg-2">
+			<nav class="navbar navbar-default">
+		        <div>
 		          <div class="navbar-header">
 		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 		              <span class="sr-only">Navegacion</span>

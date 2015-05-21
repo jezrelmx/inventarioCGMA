@@ -11,5 +11,7 @@
 		<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/cerrar_sesion.js"></script>
 		<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/consultarTipoArticulo.js"></script>
 		<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/consultarTipoArticulo.js"></script>
+		<script type="text/javascript" 	src = " <?php echo base_url(); ?>statics/js/menu_subrayado.js"></script>
+	
 	</body><!--fin Body-->
 </html><!--fin Html-->

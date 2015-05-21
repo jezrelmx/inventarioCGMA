@@ -1,4 +1,4 @@
-function controlaMenu(controlador) {
+function controlaMenu(controlador,idbtn) {
 	var liga = base + controlador;
 	//var liga = 'http://localhost/inventarioCGMA/';
 
@@ -10,6 +10,11 @@ function controlaMenu(controlador) {
 					//alert(data);
 				$('#bodyInterior').html(data);
 				
+				 $("#navbar li a").each(function (index) 
+        		{ 
+           			 $(this).removeClass('active');
+						$("#"+idbtn).addClass('active');
+				})
 			},
 			error: function () {
 				alert('Te equivocaste mi buen');
