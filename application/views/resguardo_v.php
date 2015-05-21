@@ -1,18 +1,27 @@
-<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+<?php if($usr_sesion==2){?>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<header id="header" class="">
+			<div>
+				<img src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png" width="70" heigth="70"  style="float:left"/>
+				<img src="<?php echo base_url();?>statics/img/om-gray.png" width="70" heigth="70"  style="float:left"/>
+				<lable id = "fuente"  style="float:left">Sistema De Inventario CGMA</label>
+			</div>
+			<div style="clear:both"></div>
+		</header><!-- /header -->
+<?php }else{ ?>
+	<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
+<?php }?>
 	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
 
 	 <p align="right">
-	  <?php if($usr_sesion==2){
-
-	  	?>
+	<?php if($usr_sesion==2){?>
 	  	<script>
 			var base = "<?php echo base_url();?>";
 		</script>
 	  	<script tipe="text/javascript" src="<?php echo base_url();?>statics/js/cerrar_sesion.js" ></script>
 	  	<br>
 		<button align = "left" type="button" class="btn btn-danger btn-sm" onclick = "cerrarSesion()" >Cerrar Sesion</button>
-		<?php }
-		?>
+	<?php }?>
 		
 	  		<center><h2>Resguardo</h2></center>
 	  </p>

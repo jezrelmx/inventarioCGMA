@@ -16,6 +16,10 @@ class Menu_c extends CI_Controller {
 		$this->load->view('footer_v','');	
 		$this->load->view('body_menu_v','');
 	}
+	public function bienvenido()
+	{
+		$this->load->view('bienvenido_v','');
+	}
 
 }
 

@@ -9,7 +9,7 @@
 </header><!-- /header -->
 <div class="container">
 	<div class = "row">
-		<div class = "form-group col-xs-12 col-md-2 col-sm-12 col-lg-2">
+		<div class = "form-group col-xs-12 col-md-2 col-sm-3 col-lg-2">
 			<nav class="navbar navbar-default">
 		        <div>
 		          <div class="navbar-header">
@@ -24,28 +24,29 @@
 		          <div id="navbar" class="navbar-collapse collapse">
 		            <ul class="nav navbar-nav">
 		             	<ul class="nav nav-pills nav-stacked">
-					        <li class="active"><a href="#" onclick = "menu_c/index" class="ex3">Bienvenido</a></li>
-					        <li class="dropdown">
+					        <br>
+					        <li class="active" id="btn1"><a href="#" onclick ="controlaMenu('bienvenido_c','btn1')">Bienvenido</a></li>
+					        <li class="dropdown" id="btn2">
 					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
 					          <ul class="dropdown-menu">
-					            <li><a  href="#" onclick ="controlaMenu('altaUsuario_c/index')">Alta Usuario</a></li>
-					            <li><a  href="#" onclick= "controlaMenu('consultar_usuario_c/index')"> Consulta Usuario</a></li>                      
+					            <li><a  href="#" onclick ="controlaMenu('altaUsuario_c/index','btn2')">Alta Usuario</a></li>
+					            <li><a  href="#" onclick= "controlaMenu('consultar_usuario_c/index','btn2')"> Consulta Usuario</a></li>                      
 					          </ul>
 					        </li>
-					      <li class="dropdown">  
-					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Artículos <span class="caret"></span></a>
-					      <ul class="dropdown-menu">
-					            <li><a class ="color" href="#" onclick ="controlaMenu('altaArticulo_c/index')" >   Alta Artículos</a></li>                      
-					            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo')"  >Alta Tipo Artículo</a></li> 
+					      	<li class="dropdown" id="btn3">  
+						      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Artículos <span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+					            <li><a class ="color" href="#" onclick ="controlaMenu('altaArticulo_c/index','btn3')" >   Alta Artículos</a></li>                      
+					            <li><a href="#" onclick ="controlaMenu('alta_tipo_c/altaTipo','btn3')"  >Alta Tipo Artículo</a></li> 
 					          </ul>
-					       </li>
+					       	</li>
 					       
-					      <li class="dropdown">   
-					      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
-					      <ul class="dropdown-menu">
-					            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo/')">Consulta Resguardo</a></li>
-					            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index')" >Consulta Artículos</a></li>
-					             <li><a href="#"  onclick ="controlaMenu('consultarTipoArticulo_c/consultarTipoArticulo')" >Consulta Tipo Artículos</a></li>
+					      <li class="dropdown" id="btn4">   
+						      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consulta <span class="caret"></span></a>
+						      <ul class="dropdown-menu">
+						            <li><a href="#"  onclick ="controlaMenu('resguardo_c/resguardo/','btn4')">Consulta Resguardo</a></li>
+						            <li><a href="#"  onclick ="controlaMenu('consultarArticuloGral_c/index','btn4')" >Consulta Artículos</a></li>
+						             <li><a href="#"  onclick ="controlaMenu('consultarTipoArticulo_c/consultarTipoArticulo','btn4')" >Consulta Tipo Artículos</a></li>
 		    
 					          </ul>
 					      </li>

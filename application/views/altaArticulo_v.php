@@ -1,6 +1,6 @@
 	<!-- MODAL DE ALTA DE USUARIO -->
 		<form action="" method="POST" role ="form">
-				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+				<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 					<div class="form-group"> 
 					<center><h2>Alta Artículo</h2></center>
 						<label> Tipo: </label>
@@ -34,6 +34,8 @@
 								<?php }?>
 							</select>
 					</div>
+					
+					<br>
 					<div class="form-group">
 						<label> Email de servidor responsable: </label>
 						<input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="email">

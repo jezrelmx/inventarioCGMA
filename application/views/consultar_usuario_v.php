@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 	  <script tipe="text/javascript" src="<?php echo base_url();?>statics/js/consultar_usuario_js.js" ></script>
 	  
 	  <center><h2>Usuarios Registrados</h2></center>

@@ -18,3 +18,14 @@
 	text-shadow:5px 5px 5px #000;
 }
 
+#nav ul li a:hover {
+    border-bottom:3px #FFF solid;
+    }
+ 
+#nav ul li .active {
+    border-bottom:3px #FFF solid;
+    }
+  
+h3{
+    font-size: 50px;
+  }

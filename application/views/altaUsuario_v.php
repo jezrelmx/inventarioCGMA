@@ -1,6 +1,6 @@
 	<!-- MODAL DE ALTA DE USUARIO -->
 		<form action="" method="POST" role ="form">
-				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+				<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
 					<div class="form-group"> 
 					<h2><center>Alta Usuario</h2></center>
 						
@@ -31,7 +31,7 @@
 					<label for="">Dirección ejecutiva</label>
 					<br>
 					<select class="form-control" id="direccion">
-						 <option value="0"></option>
+						 <option value="0">Direccion ejecutiva</option>
 						 <?php foreach ($cat_direccion_ejecutiva as $key => $value) { ?>
 						 <option value="<?php echo $key;?>"><?php echo $value['descripcion'];?></option>
 						 <?php }?>
@@ -41,7 +41,7 @@
 					<label for="">Tipo usuario</label>
 					<br>
 					<select  class="form-control" id="tipoUsuario">
-						 <option value="0"></option>
+						 <option value="0">Tipo usuario</option>
 						 <?php foreach ($cat_tipo_usuario as $key => $value) { ?>
 						 	<option value="<?php echo $key;?>"><?php echo $value['descripcion'];?></option>
 						 <?php }?>
