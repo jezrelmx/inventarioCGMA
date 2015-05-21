@@ -21,7 +21,7 @@ class Index_c extends CI_Controller {
 		$contrasenia=$this->input->post('txtContrasenia');
 		$resultado=$this->index_m->buscar_usuario($usuario);
 		$tipo_usuario;
-
+		
 		if($resultado){
 			if($resultado[0]['id_tipo_usuario']==1 && strcmp($contrasenia, '')>0 && strcmp($contrasenia,$resultado[0]['contrasenia'])==0){
 				$tipo_usuario=$resultado[0]['id_direccion_ejecutiva'];
