@@ -35,7 +35,7 @@
 	    	$sin_resguardo=1;
 	    	if($id_usuario!=$val['id_usuario']){ 
 	    		$id_usuario=$val['id_usuario']; ?>
-	    		<div>
+	    		<div class="boxResguardo">
     				<label>Nombre: <?php echo $val['nombre']; ?> </label>
 			      	<br>
 			        <label>Número de empleado: <?php echo $val['num_empleado']; ?></label>
