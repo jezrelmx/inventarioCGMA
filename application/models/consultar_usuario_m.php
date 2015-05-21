@@ -21,7 +21,7 @@ class Consultar_usuario_m extends CI_Model {
       		 u.email, u.estatus from usuarios u
       		 inner join cat_tipo_usuario c_t_u on (c_t_u.id_tipo_usuario=u.id_tipo_usuario)
       		 inner join cat_direccion_ejecutiva c_d_t on(u.id_direccion_ejecutiva=c_d_t.id_direccion_ejecutiva)
-			 where id_usuario=".$id." and estatus=1 order by id_usuario;";
+			 where id_usuario=".$id." order by id_usuario;";
 		}
 		
 		$resultado = $this->db->query($customQuery);	

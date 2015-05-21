@@ -16,7 +16,11 @@ class Resguardo_c extends CI_Controller {
 		$this->load->view('index_v','');
 	}
 	public function resguardo($usuario='',$tipo_usuario=0){
-
+		if (strcmp($usuario,'')==0) {
+			if($this->input->post('email')){
+				$usuario=$this->input->post('email');
+			}
+		}
 		//echo "Estoy en resguardo_c y el id es: ".$id_usuario;$
 		$datos['usr_sesion']=$tipo_usuario;
 		if (strcmp($usuario, '')==0) {

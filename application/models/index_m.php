@@ -23,11 +23,8 @@ class Index_m extends CI_Model {
 		}
 
 		if(strcmp($usuario,'')>0){
-			$customQuery .=  " where u.email='".$usuario."' and u.estatus=1;";
+			$customQuery .=  " where u.email='".$usuario."';";
 		
-		}else{
-			$customQuery .=  " where u.estatus=1;";
-			
 		}
 		$resultado = $this->db->query($customQuery);
 
