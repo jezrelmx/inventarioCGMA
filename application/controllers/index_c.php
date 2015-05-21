@@ -21,7 +21,7 @@ class Index_c extends CI_Controller {
 		$contrasenia=$this->input->post('txtContrasenia');
 		$resultado=$this->index_m->buscar_usuario($usuario);
 		$tipo_usuario;
-		
+
 		if($resultado){
 			if($resultado[0]['id_tipo_usuario']==1 && strcmp($contrasenia, '')>0 && strcmp($contrasenia,$resultado[0]['contrasenia'])==0){
 				$tipo_usuario=$resultado[0]['id_direccion_ejecutiva'];
@@ -45,8 +45,8 @@ class Index_c extends CI_Controller {
 					}
 				}
 			}else if($resultado[0]['id_tipo_usuario']==2){
-				//usuario servidor público
-				//$id_usuario=$resultado[0]['id_usuario'];
+				
+				$usuario=str_replace('@','__',$usuario);
 				redirect(base_url()."resguardo_c/resguardo/".$usuario.'/'.$resultado[0]['id_tipo_usuario']);				
 			}else{
 				echo "El tipo de usuario no existe";
