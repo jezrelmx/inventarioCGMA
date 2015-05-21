@@ -36,14 +36,14 @@
 						<label for="">Contraseña</label>						
 						<input type="password" class="form-control" id="txtContrasenia" name="txtContrasenia" placeholder="Escriba su contraseña">
 					</div>
-					<center><button type="submit" class="btn btn-primary">Entrar</button></center>
+					<button type="submit" class="btn btn-primary" style="float:right">Entrar</button><br>
 				</form>
 				<br>
 				<legend>
 				</legend>
 		
-				<img id="df" src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png"/>
-				<img id="df1" src="<?php echo base_url();?>statics/img/om-gray.png"/>
+				<img id="df" width="70px" src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png"/>
+				<img id="df1" width="70px" src="<?php echo base_url();?>statics/img/om-gray.png"/>
 		  	</div>
 		  </div>
 		</div>

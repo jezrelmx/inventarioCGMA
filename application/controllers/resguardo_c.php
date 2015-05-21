@@ -27,20 +27,21 @@ class Resguardo_c extends CI_Controller {
 		$datos['usr_sesion']=$tipo_usuario;
 		if (strcmp($usuario, '')==0) {
 			$datos['usuario']=$this->index_m->buscar_usuario(FALSE,1);
-			$datos['resguardo']=$this->resguardo_m->obtener_resguardo(FALSE,1);
+			$datos['resguardo']=$this->resguardo_m->obtener_resguardo(FALSE);
 
 		}else{
 			$datos['usuario']=$this->index_m->buscar_usuario($usuario);
 			$datos['resguardo']=$this->resguardo_m->obtener_resguardo($usuario);
 
 		}
+		
 		if ($datos['usuario'] && ($datos['resguardo'] && !empty($datos['resguardo']))) {
 			if($this->agent->mobile() && !$this->agent->is_browser()){
 
 				$arregloJSON = array(
 					"code" => 200,
 					"message" => "resguardo por usuario",
-					"data" => $datos,
+					"data" => $datos['resguardo'],
 				 );
 
 				echo json_encode($arregloJSON);

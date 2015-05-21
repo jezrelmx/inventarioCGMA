@@ -23,6 +23,7 @@ class Resguardo_m extends CI_Model {
 		$sql_query.=" order by usr.id_usuario;";
 
 		$resultado = $this->db->query($sql_query);
+	
 		if ($resultado) {
 			if ($resultado->num_rows()>0 ) {
 				return $resultado->result_array();
