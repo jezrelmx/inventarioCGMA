@@ -84,10 +84,9 @@ class Consultar_usuario_c extends CI_Controller {
 	/*Obtiene el usuario por email recibe el email que es usuario y have_pass si es 1 no envia contrasenia
 	 ALEJ. */
 	public function usuario_email(){
-		$usuario=$this->input->post('mail');
+		$usuario=$this->input->post('email');
 		$resultado=$this->index_m->buscar_usuario($usuario,1);
 		if ($resultado) {
-			$datos['resultado']=$resultado;
 			if($this->agent->mobile() && !$this->agent->is_browser()){
 				$arregloJSON = array(
 
@@ -98,7 +97,6 @@ class Consultar_usuario_c extends CI_Controller {
 
 				echo json_encode($arregloJSON);
 			}
-
 				
 		}else {
 			if($this->agent->mobile() && !$this->agent->is_browser()){
