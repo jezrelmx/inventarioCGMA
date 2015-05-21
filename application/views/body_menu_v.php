@@ -1,9 +1,20 @@
-<body onload="controlaMenu('bienvenido_c','btn1')">
+<body>
+<style type="text/css">
+	@media (max-width: 768px) {
+		#header{
+			display: none
+		}
+	}
+</style>
 <header id="header" class="">
-	<div>
-		<img src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png" width="70" heigth="70"  style="float:left"/>
-		<img src="<?php echo base_url();?>statics/img/om-gray.png" width="70" heigth="70"  style="float:left"/>
-		<lable id = "fuente"  style="float:left">Sistema De Inventario CGMA</label>
+	<div class="container">
+		<div class = "row">
+			<div class = "form-group col-xs-12 col-md-12 col-sm-12 col-lg-12">
+				<img src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png" width="70" heigth="70"  style="float:left"/>
+				<img src="<?php echo base_url();?>statics/img/om-gray.png" width="70" heigth="70"  style="float:left"/>
+				<lable id = "fuente"  style="float:left">Sistema De Inventario CGMA</label>
+			</div>
+		</div>
 	</div>
 	<div style="clear:both"></div>
 </header><!-- /header -->
