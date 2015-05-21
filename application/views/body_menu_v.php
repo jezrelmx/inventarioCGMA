@@ -1,4 +1,4 @@
-<body>
+<body onload="controlaMenu('bienvenido_c','btn1')">
 <header id="header" class="">
 	<div>
 		<img src="<?php echo base_url();?>statics/img/ciudad-de-mexico-logo-gray.png" width="70" heigth="70"  style="float:left"/>

@@ -5,8 +5,7 @@ function eliminarArticulo(id){
 			type: 'post',
 			data: {id_articulo: id},
 			success: function (data) {
-				alert(data);
-				//$("#bodyInterior").html(data);		
+				$("#bodyInterior").html(data);		
 			},
 			error: function (data) {
 				//alert(JSON_resultado.message);

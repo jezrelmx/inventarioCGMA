@@ -5,8 +5,8 @@
 		      <tr>
 		      	<th>Acciones</th>
 		        <th>Tipo</th>
-		        <th>Características</th>
 		        <th>Número de inventario</th>
+		        <th>Características</th>
 		        <th>Estatus</th>
 		        <th>Nombre del servidor público</th>
 		        <th>Número de empleado</th>

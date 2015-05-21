@@ -24,23 +24,21 @@ class Alta_tipo_c extends CI_Controller {
 		if($this->agent->mobile() && !$this->agent->is_browser()){
 				if($resultado){
 					$arregloJSON = array(
-					"code" => 200,
-					"message" => "Se agrego tipo articulo",
-					"data" => 'No aplica',
-				);
-				}
-				else{
+						"code" => 200,
+						"message" => "Se agrego tipo articulo",
+						"data" => 'No aplica',
+					);
+				}else{
 					$arregloJSON = array(
-				"code" => 600,
-				"message" => "No hay usuarios",
-				"data" => "no aplica" 
-				);
+						"code" => 600,
+						"message" => "No hay usuarios",
+						"data" => "no aplica" 
+					);	
 				}
 				echo json_encode($arregloJSON);
-		}
-		else {
+		}else {
 			if($resultado){
-				echo "Se dio de alta correctamente";
+				redirect(base_url().'consultarTipoArticulo_c/consultarTipoArticulo');
 			}else{
 				
 				echo "Error en el alta tipo articulos";
