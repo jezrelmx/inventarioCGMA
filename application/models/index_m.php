@@ -21,7 +21,7 @@ class Index_m extends CI_Model {
       		 inner join cat_direccion_ejecutiva c_d_t on(u.id_direccion_ejecutiva=c_d_t.id_direccion_ejecutiva)";	
 		}
 
-		if($usuario){
+		if(strcmp($usuario,'')>0){
 			$customQuery .=  " where u.email='".$usuario."' and u.estatus=1;";
 		
 		}else{

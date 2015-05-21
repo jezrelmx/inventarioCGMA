@@ -57,11 +57,10 @@ public function guardarDatosUsuario(){
 		$id_tipo_usuario = $this->input->post('id_tipo_usuario');
 		$email = $this->input->post('email');
 		$contrasenia = $this->input->post('contrasenia');
-		$estatus = $this->input->post('estatus');
+		//$estatus = $this->input->post('estatus');
 		//echo $nombre.'-app'.$ap_paterno.'-apm'.$ap_materno.'-cargo'.$cargo.'-numem'.$num_empleado.'-
 		//'.'-ide'.$id_direccion_ejecutiva.'-dtu'.$id_tipo_usuario.'-email'.$email.'-pass'.$contrasenia.'-est'.$estatus;
-		$resultado=$this->altaUsuario_m->guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia, $estatus);
-		 
+		$resultado=$this->altaUsuario_m->guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia);	 
 		if($resultado){
 			if($this->agent->mobile() && !$this->agent->is_browser()){
 		 	$respuesta_json= array(

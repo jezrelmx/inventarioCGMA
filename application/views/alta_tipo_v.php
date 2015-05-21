@@ -1,5 +1,5 @@
 <form method="POST" role ="form">
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
 		<div class="form-group"> 
 			<center><h2>Alta Tipo Artículo</h2></center>
 				<br><label for="">Descripción</label>

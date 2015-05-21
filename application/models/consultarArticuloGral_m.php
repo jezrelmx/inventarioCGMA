@@ -8,10 +8,11 @@ class ConsultarArticuloGral_m extends CI_Model{
 
 		public function obtenerDatosArticulo(){
 
-			$customQuery = "SELECT  art.id_articulo,catm.descripcion as tipo, catm.clave || '-' || art.progresivo as numInventario, art.caracteristicas, art.id_estatus, usr.nombre || ' ' || usr.ap_paterno as usuario, usr.num_empleado
+			$customQuery = "SELECT  art.id_articulo,catm.descripcion as tipo, catm.clave || '-' || art.progresivo as numInventario, art.caracteristicas, art.id_estatus,cate.descripcion as estatus, usr.nombre || ' ' || usr.ap_paterno as usuario, usr.num_empleado
 				  FROM articulos art 
 				  left join usuario_has_articulo usa on usa.id_articulo = art.id_articulo
 				  left join usuarios usr on usr.id_usuario= usa.id_usuario
+				  left join cat_estatus cate on cate.id_estatus=art.id_estatus
 				  left join cat_tipo_mueble catm on catm.id_tipo_mueble= art.id_tipo_mueble order by tipo;";
 		 	$resultado = $this->db->query($customQuery);
 

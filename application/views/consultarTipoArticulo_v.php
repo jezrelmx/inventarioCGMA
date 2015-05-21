@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
 	<center><h2>Tipo de Artículos </h2></center>
 	 	<table border="1" class="table table-bordered">
 	    

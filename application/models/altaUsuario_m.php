@@ -7,10 +7,9 @@ class AltaUsuario_m extends CI_Model{
 			$this->load->database();//Aqui se endicq que base de datos se va a usar como parametro, si o hay parametro de va a la de default
 		}
 
-public function guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia, $estatus){
+public function guardarDatosUsuario($nombre, $ap_paterno, $ap_materno, $cargo, $num_empleado, $id_direccion_ejecutiva, $id_tipo_usuario, $email, $contrasenia){
        	$customQuery = "INSERT INTO usuarios(nombre, ap_paterno, ap_materno, cargo, num_empleado, id_direccion_ejecutiva, id_tipo_usuario, email, contrasenia, 
-            estatus) VALUES ('".$nombre."', '".$ap_paterno."', '".$ap_materno."',  '".$cargo."',  '".$num_empleado."', "
-            .$id_direccion_ejecutiva.",".$id_tipo_usuario.", '".$email."', '".$contrasenia."', '".$estatus."')";
+            estatus) VALUES ('".$nombre."', '".$ap_paterno."', '".$ap_materno."',  '".$cargo."',  '".$num_empleado."', " .$id_direccion_ejecutiva.",".$id_tipo_usuario.", '".$email."', '".$contrasenia."', 1)";
 		$resultado = $this->db->query($customQuery);
 			if ($resultado) {
 			return true;

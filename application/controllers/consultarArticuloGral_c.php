@@ -6,6 +6,7 @@ class ConsultarArticuloGral_c extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(array('url','html'));
+		$this->load->library(array('user_agent'));
 		$this->config->base_url();
 		$this->load->model(array('consultarArticuloGral_m','altaArticulo_m'));
 	}
@@ -14,7 +15,35 @@ class ConsultarArticuloGral_c extends CI_Controller {
 	{
 		$datos['cat_estatus']=$this->altaArticulo_m->traerEstatus();
 		$datos['listaArticulos']=$this->consultarArticuloGral_m->obtenerDatosArticulo();
-		$this->load->view('ConsultarArticuloGral_v',$datos);
+		
+		
+		if ($datos['listaArticulos']) {
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 200,
+					"message" => "Listado de todos los artículo del inventario",
+					"data" => $datos['listaArticulos']
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				$this->load->view('ConsultarArticuloGral_v',$datos);
+			}
+			
+		}else{
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 600,
+					"message" => "No se pudo consultar la lista de artículos",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				echo "No se pudo consultar la lista de artículos";
+			}
+			
+		}
 	}
 
 	public function eliminarArticulo(){
@@ -22,9 +51,31 @@ class ConsultarArticuloGral_c extends CI_Controller {
 		$resultado=$this->consultarArticuloGral_m->eliminarArticulo($id_articulo);
 
 		if ($resultado) {
-			$this->index();
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 200,
+					"message" => "Se elimino correctamente",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				$this->index();	
+			}
+			
 		}else{
-			echo "No se elimino correctamente";
+			if($this->agent->mobile() && !$this->agent->is_browser()){
+				$arregloJSON = array(
+					"code" => 600,
+					"message" => "No se elimino correctamente",
+					"data" => 'No aplica'
+				 );
+
+				echo json_encode($arregloJSON);
+			}else{
+				echo "No se elimino correctamente";
+			}
+			
 		}
 	}
 }
