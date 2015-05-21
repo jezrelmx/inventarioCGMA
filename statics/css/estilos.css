@@ -1,4 +1,8 @@
-  
+  @media (max-width: 768px) {
+    #header{
+      display: none
+    }
+  }
   h2{
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
@@ -9,7 +13,7 @@
 	font-size: 35px ;
 	color: #FFFFFF;
 	text-align: bottom;
-	margin-left: 20%;
+	margin-left: 27%;
 }
 
 #header{

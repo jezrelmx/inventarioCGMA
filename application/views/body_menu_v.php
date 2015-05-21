@@ -1,11 +1,5 @@
-<body>
-<style type="text/css">
-	@media (max-width: 768px) {
-		#header{
-			display: none
-		}
-	}
-</style>
+<body onload="controlaMenu('bienvenido_c','btn1')">
+
 <header id="header" class="">
 	<div class="container">
 		<div class = "row">
